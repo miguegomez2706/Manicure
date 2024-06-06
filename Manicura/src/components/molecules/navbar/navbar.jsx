@@ -1,5 +1,5 @@
 import "./navbar.css";
-import Boton from "../../atoms/button";
+import Boton from "../../atoms/Btn";
 
 const Navbar = () => {
   return (
