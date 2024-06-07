@@ -8,7 +8,7 @@ import Btn from "../atoms/Btn";
 const ListCard = () => {
   return (
     <div className="flex flex-col bg-mycolor h-full ">
-      <div className="flex justify-around p-14">
+      <div className="flex justify-around p-14 container mx-auto my-4">
         <Card imgSrc={img1}>
           <h3>algo</h3>
           <p>algo1</p>
