@@ -1,16 +1,20 @@
 import "./App.css";
-import Boton from "./components/atoms/button.jsx";
 import Navbar from "./components/molecules/navbar/navbar.jsx";
+import semi1 from "./assets/image/semipermanente/semi1.jpeg";
+import ListCard from "./components/molecules/ListCard.jsx";
+import Commercial from "./components/molecules/commercial.jsx";
 
+const publicidad = {
+  img: semi1,
+  title: "titulo",
+  description: "descripcion",
+};
 function App() {
   return (
     <>
       <Navbar />
-      <div>asd</div>
-
-      <h1>Hola amigos, titulo de manicura aqui</h1>
-      <Boton nameButton="Hola" />
-      <Boton nameButton="Click Me" />
+      <ListCard />
+      <Commercial publicidad={publicidad} />
     </>
   );
 }

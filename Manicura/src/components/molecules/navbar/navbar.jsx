@@ -1,9 +1,9 @@
 import "./navbar.css";
-import Boton from "../../atoms/button";
+import Boton from "../../atoms/Btn";
 
 const Navbar = () => {
   return (
-    <div className="navBarContainer">
+    <div className="navBarContainer container mx-auto my-4">
       <div className="Navbarleft">
         <p>Corte&Estilo</p>
       </div>
