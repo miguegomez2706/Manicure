@@ -9,6 +9,7 @@ const publicidad = {
   title: "titulo",
   description: "descripcion",
 };
+
 function App() {
   return (
     <>
