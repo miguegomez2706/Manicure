@@ -12,6 +12,9 @@ export default {
         150: "37.5rem", // 150 píxeles
         // Puedes agregar más alturas personalizadas según sea necesario
       },
+      width: {
+        ancho: "28rem",
+      },
     },
   },
   plugins: [],

@@ -5,7 +5,7 @@ import img1 from "../../assets/image/semipermanente/semi6.jpeg";
 const Commercial = () => {
   return (
     <div className="mx-44 my-4">
-      <h3 className=" text-7xl my-10">
+      <h3 className="text-7xl my-10">
         Hola que <br></br> haces{" "}
       </h3>
       <div className="flex flex-row border border-gray-400 rounded-lg overflow-hidden">
