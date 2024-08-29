@@ -5,11 +5,11 @@ import Card from "./Card";
 //   title: "titulos3",
 // }
 const RenderImg = ({ imagen }) => {
-  const { image, title, info } = imagen;
+  const { image, title, info, cssClass } = imagen;
   return (
     <div>
       <Card imgSrc={image}>
-        <h3>{title}</h3>
+        <h3 className={cssClass}>{title}</h3>
         <p>{info}</p>
       </Card>
     </div>

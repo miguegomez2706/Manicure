@@ -2,9 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      rale: ["Raleway"],
+    },
     extend: {
       colors: {
-        mycolor: "#1c1c1e",
+        mycolor: "#212121",
       },
       height: {
         120: "30rem", // 120 píxeles

@@ -9,8 +9,8 @@ const cards = [
 
 const ListCardText = () => {
   return (
-    <div className="flex flex-col bg-yellow-200 py-24 my-24 ">
-      <div className="flex justify-evenly mx-44">
+    <div className="bg-yellow-200 py-24 my-24 ">
+      <div className="grid grid-cols-1 xm sm:grid-cols-2 gap-11 mx-44">
         {cards.map((t1) => (
           <CardText text={t1.text} color={t1.color} />
         ))}

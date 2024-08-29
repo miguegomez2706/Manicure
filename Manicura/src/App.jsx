@@ -16,13 +16,13 @@ const publicidad = {
 
 function App() {
   return (
-    <>
+    <div className="font-rale">
       <Navbar />
       <ListCard />
       <Commercial publicidad={publicidad} />
       <ListCardText />
       <ListCardGeneral />
-    </>
+    </div>
   );
 }
 

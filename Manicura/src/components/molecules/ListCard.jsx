@@ -5,8 +5,8 @@ import { imgs } from "../../assets/dataStore";
 
 const ListCard = () => {
   return (
-    <div className="flex flex-col bg-mycolor h-full mx-44 ">
-      <div className="flex justify-around p-14 container mx-auto my-4">
+    <div className="flex flex-col bg-mycolor h-full">
+      <div className="flex justify-around p-14 container my-4 mx-44">
         {imgs.map((img) => (
           <RenderImg imagen={img} />
         ))}
