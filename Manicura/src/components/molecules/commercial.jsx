@@ -52,10 +52,12 @@ const Commercial = () => {
             Mejores Precios
           </p>
           <Btn
-            bg={
-              "px-6 py-2 md:px-8 md:py-3 lg:px-10 lg:py-4 text-white rounded bg-mycolor hover:bg-mycolor-dark"
+            rounded={false}
+            type={
+              "primary"
+              // "px-6 py-2 md:px-8 md:py-3 lg:px-10 lg:py-4 text-white rounded bg-mycolor hover:bg-mycolor-dark"
             }
-            nameButton={"Lista Card"}
+            buttonText={"Lista Card"}
           />
         </div>
       </div>

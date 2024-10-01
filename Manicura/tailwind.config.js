@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         mycolor: "#212121",
+        beige: "#E5DCBC",
       },
       height: {
         120: "30rem", // 120 píxeles

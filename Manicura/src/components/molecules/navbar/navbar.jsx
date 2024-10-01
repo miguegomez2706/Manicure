@@ -52,8 +52,8 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="relative ">
-      <div className="container mx-auto flex items-center">
+    <nav className="sticky top-0 bg-gray-200 w-[100%] z-50">
+      <div className="md:px-20 lg:px-44 py-4 flex items-center -ml-3 md:-ml-6">
         <div className="flex flex-grow items-center ">
           <img src={icon} alt="" className="w-20 h-20" />
           <a href="" className="font-style: italic">
@@ -78,8 +78,8 @@ const NavBar = () => {
         <div
           id="menu"
           className={`${
-            menuVisible ? "block bg-white w-full absolute" : "hidden"
-          } left-0 flex-grow justify-between absolute lg:w-auto lg:block lg:relative lg:top-0 top-20 py-5 px-11`}
+            menuVisible ? "block bg-white w-full " : "hidden"
+          } left-0 flex-grow justify-between lg:w-auto lg:block lg:relative lg:top-0 top-20 py-5 px-11`}
         >
           <div className="flex flex-col lg:flex-row ">
             <a href="#" className="lg:mr-7">
