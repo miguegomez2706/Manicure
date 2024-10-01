@@ -20,8 +20,8 @@ const CardTextCarrousel = () => {
 
   return (
     <div>
-      <div className="flex flex-row">
-        <CardText text={cards[currentCard].content} />
+      <div className="flex flex-row bg">
+        <CardText text={cards[currentCard].content} color={"bg-white"} />
       </div>
     </div>
   );

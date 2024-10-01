@@ -5,17 +5,14 @@ import { imgs } from "../../assets/dataStore";
 
 const ListCard = () => {
   return (
-    <div className="flex flex-col bg-mycolor h-full">
-      <div className="flex justify-around p-14 container my-4 mx-44">
+    <div className="flex flex-col bg-mycolor h-full items-center">
+      <div className="flex justify-around w-3/4 mt-10">
         {imgs.map((img) => (
           <RenderImg imagen={img} />
         ))}
       </div>
       <div className="flex justify-center items-center pb-10">
-        <Btn
-          bg={"w-32 h-16 bg-white rounded hover:bg-mycolor"}
-          nameButton={"Lista Card"}
-        />
+        <Btn rounded={true} type={"primary"} buttonText={"Lista Card"} />
       </div>
     </div>
   );
