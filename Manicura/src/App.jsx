@@ -8,6 +8,7 @@ import CardText from "./components/atoms/CardText.jsx";
 import CardTextCarrousel from "./components/molecules/CardTextCarrousel.jsx";
 import ListCardGeneral from "./components/molecules/ListCardGeneral.jsx";
 import Footer from "./components/molecules/Footer.jsx";
+import Carousel from "./components/molecules/Carousel.jsx";
 
 const publicidad = {
   img: semi1,
@@ -19,9 +20,10 @@ function App() {
   return (
     <div className="font-rale">
       <Navbar />
+      {/* <Carousel /> */}
       <ListCard />
       <Commercial publicidad={publicidad} />
-      <ListCardText />
+      {/* <ListCardText /> */}
       <ListCardGeneral />
       <Footer />
     </div>

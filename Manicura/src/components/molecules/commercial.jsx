@@ -51,14 +51,7 @@ const Commercial = () => {
           <p className="font-rale text-base md:text-2xl lg:text-3xl text-center pb-3 xl:pb-6">
             Mejores Precios
           </p>
-          <Btn
-            rounded={false}
-            type={
-              "primary"
-              // "px-6 py-2 md:px-8 md:py-3 lg:px-10 lg:py-4 text-white rounded bg-mycolor hover:bg-mycolor-dark"
-            }
-            buttonText={"Lista Card"}
-          />
+          <Btn rounded={true} type={"primary"} buttonText={"Ver Precios!"} />
         </div>
       </div>
     </div>
