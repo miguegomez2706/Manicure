@@ -8,7 +8,7 @@ const ListCard = () => {
     <div className="flex flex-col bg-mycolor h-full items-center">
       <div className="flex justify-around w-3/4 mt-10">
         {imgs.map((img) => (
-          <RenderImg imagen={img} texto={"Algo"} rounded={true} />
+          <RenderImg imagen={img} texto={"Algo"} rounded={true} modal={false} />
         ))}
       </div>
       <div className="flex justify-center items-center pb-10">
