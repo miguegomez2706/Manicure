@@ -5,6 +5,7 @@ import ListCard from "./components/molecules/ListCard.jsx";
 import Commercial from "./components/molecules/commercial.jsx";
 import ListCardGeneral from "./components/molecules/ListCardGeneral.jsx";
 import Footer from "./components/molecules/Footer.jsx";
+import SalonComponent from "./components/atoms/SalonComponent.jsx";
 import ListCardText from "./components/molecules/ListCardText.jsx";
 import CardText from "./components/atoms/CardText.jsx";
 import CardTextCarrousel from "./components/molecules/CardTextCarrousel.jsx";
@@ -23,6 +24,7 @@ function App() {
       {/* <Carousel /> */}
       <ListCard />
       <Commercial publicidad={publicidad} />
+      <SalonComponent />
       {/* <ListCardText /> */}
       <ListCardGeneral />
       <Footer />
