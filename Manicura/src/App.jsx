@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/molecules/navbar/navbar.jsx";
+import HomeSwiper from "./components/homeSwiper/HomeSwiper";
 import semi1 from "./assets/image/semipermanente/semi1.jpeg";
 import ListCard from "./components/molecules/ListCard.jsx";
 import Commercial from "./components/molecules/commercial.jsx";
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="font-rale">
       <Navbar />
+      <HomeSwiper />
       {/* <Carousel /> */}
       <ListCard />
       <Commercial publicidad={publicidad} />

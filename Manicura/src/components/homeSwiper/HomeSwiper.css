@@ -1,0 +1,130 @@
+/* homeSwiper.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  
+  .home-swiper-container {
+    width: 100vw; /* El carrusel ocupa todo el ancho de la pantalla */
+    height: 80vh; /* El carrusel ocupa toda la altura de la pantalla */
+    overflow: hidden;
+    position: relative;
+    background-color: var(--body-color);
+  }
+  
+  .home-swiper-slide {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-color);
+    margin: 0 auto;
+  }
+  
+  .image-section {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-section img {
+    width: 100%; /* Ocupa todo el ancho del carrusel */
+    height: 100%; /* Asegura que la imagen mantenga proporción */
+    object-fit: cover; /* Recorta la imagen para cubrir el área */
+    transform: translateY(-20%);
+  }
+
+  /* Sección fija encima del Swiper */
+.fixed-section {
+    position: absolute;
+    top: 100px;  /* Ajusta el espacio desde la parte superior */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;  /* Asegúrate de que esta sección quede encima del Swiper */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: transparent; /* Fondo semitransparente */
+    width: 80%; /* Ajusta según sea necesario */
+}
+
+.fixed-section h1,
+.fixed-section h2 {
+    margin: 10px 0;
+}
+
+.buttons-container button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: var(--first-color-alt);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons-container button:hover {
+    background-color: var(--first-color);
+}
+  
+  .content-section {
+    position: absolute; /* Lo mantiene fijo */
+    z-index: 2;
+    top: 50%;
+    left: 20px; /* Ajusta el margen izquierdo si es necesario */
+    transform: translateY(-50%); /* Centra verticalmente */
+    width: 300px; /* O ajusta el tamaño del contenido */
+    color: white; /* Para que el texto sea visible sobre imágenes oscuras */
+  }
+  
+  .content-section h1 {
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-0-75);
+    margin-top: 15%;
+  }
+  
+  .content-section h2 {
+    font-size: var(--biggest-font-size);
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-bold);
+    color: var(--title-color);
+    margin-top: 10px;
+  }
+  
+  .content-section h3 {
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-0-75);
+    color: var(--text-color);
+    text-align: center;
+  }
+  
+  .content-section button {
+    padding: 10px 20px;
+    background-color: var(--first-color-alt);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 25%;
+    height: 60px;
+    margin-top: 20px;
+  }
+  
+  .content-section button:hover {
+    background-color: var(--first-color);
+  }
+  
+  @media (max-width: 768px) {
+    .content-section {
+      padding: 15px;
+    }
+  
+    .image-section img {
+      height: 300px;
+    }
+  }
+  
