@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="font-rale">
       <Navbar />
-      <HomeSwiper />
+      {/* <HomeSwiper /> */}
       {/* <Carousel /> */}
       <ListCard />
       <Commercial publicidad={publicidad} />

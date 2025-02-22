@@ -38,6 +38,7 @@ const HomeSwiper = () => {
           delay: 3000, // Cambia de slide cada 3 segundos
           disableOnInteraction: false, // No se detiene al interactuar
         }}
+        speed = {1500}
       >
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
