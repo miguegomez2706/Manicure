@@ -28,7 +28,7 @@ const HomeSwiper = () => {
         </div>
       </div>
 
-      {/* Contenedor principal del Swiper */}
+      {/* Contenedor principal del Swiper aa */}
       <Swiper
         modules={[ Autoplay ]} // Agrega los módulos aquí
         spaceBetween={0}
