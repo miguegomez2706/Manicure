@@ -2,14 +2,14 @@ import React from "react";
 import imgLocal from "../../assets/image/comunes/imagenLocal.jpeg";
 const SalonComponent = () => {
   return (
-    <div className="flex items-center justify-center p-8 m-20">
+    <div className="grid grid-cols-1 md:grid-cols-2">
       {/* Imagen circular */}
-      <div className="relative w-1/2 h-1/2 flex items-center justify-center">
-        <div className="overflow-hidden w-auto h-screen">
+      <div className="relative w-1/2 h-1/2 ">
+        <div className="overflow-hidden">
           <img
             src={imgLocal}
             alt="Salon Image"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-4/6"
           />
         </div>
         {/* <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
@@ -19,7 +19,7 @@ const SalonComponent = () => {
         </div> */}
       </div>
 
-      <div className="w-1/2 px-8">
+      <div>
         <h2 className="mb-10 text-5xl border-gray-200 rounded-lg overflow-hidden font-extralight">
           Más que un Salón de Uñas:
         </h2>
