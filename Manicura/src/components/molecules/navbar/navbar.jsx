@@ -46,7 +46,7 @@ const NavBar = () => {
               Início{" "}
             </a>
             <a href="#" className="lg:mr-7">
-              Cursos
+              Sobre nosotros
             </a>
             <a href="#" className="lg:mr-7">
               Sobre nosótros
