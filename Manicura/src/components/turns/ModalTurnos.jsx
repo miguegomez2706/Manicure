@@ -3,7 +3,7 @@ import "./ModalTurnos.css"; // Archivo de estilos
 
 const ModalTurnos = ({ isOpen, onClose, servicios }) => {
   return (
-    // Uso de ternaria
+    // Uso de ternaria!!!!
     <div className={`modal-overlay ${isOpen ? "open" : ""}`}>
       <div className="modal-content">
         <button className="close-btn" onClick={onClose}>
