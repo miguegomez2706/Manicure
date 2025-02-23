@@ -1,0 +1,76 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Oculta la modal */
+    width: 50%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    transition: right 0.4s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-overlay.open {
+    right: 0; /* Muestra la modal */
+  }
+  
+  .modal-content {
+    background: white;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+/* Estilos para cada servicio */
+.servicio {
+  padding: 20px 0;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+  
+  .servicio h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .servicio p {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  
+  .servicio button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .servicio button:hover {
+    background-color: #0056b3;
+  }
+  

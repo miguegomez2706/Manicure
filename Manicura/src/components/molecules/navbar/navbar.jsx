@@ -43,16 +43,16 @@ const NavBar = () => {
         >
           <div className="flex flex-col lg:flex-row ">
             <a href="#" className="lg:mr-7">
-              Inicio{" "}
-            </a>
-            <a href="#" className="lg:mr-7">
-              Cursos
+              Início{" "}
             </a>
             <a href="#" className="lg:mr-7">
               Sobre nosotros
             </a>
             <a href="#" className="lg:mr-7">
-              Servicios
+              Sobre nosótros
+            </a>
+            <a href="#" className="lg:mr-7">
+              Servícios
             </a>
           </div>
         </div>
