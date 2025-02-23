@@ -1,20 +1,22 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay, EffectFade } from 'swiper/modules'; // Importa los módulos
-import 'swiper/css'; // Importa los estilos base de Swiper
-import 'swiper/css/autoplay'; // Importa los estilos para autoplay
-import './HomeSwiper.css'; // Tus estilos personalizados
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "./HomeSwiper.css";
+import ModalTurnos from "../turns/ModalTurnos"; // Importamos la modal
+import servicios from "../turns/servicios"; // Importamos los servicios
 
-// Imágenes
-import bluenailImage from '../../assets/image/swiper/bluenail.jpg';
-import mixnailImage from '../../assets/image/swiper/mixnail.jpg';
-import yellownailImage from '../../assets/image/swiper/yellownail.jpg';
+import bluenailImage from "../../assets/image/swiper/bluenail.jpg";
+import mixnailImage from "../../assets/image/swiper/mixnail.jpg";
+import yellownailImage from "../../assets/image/swiper/yellownail.jpg";
 
 const HomeSwiper = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
   const slidesData = [
-    { imgSrc: bluenailImage, alt: 'Slide 1' },
-    { imgSrc: mixnailImage, alt: 'Slide 2' },
-    { imgSrc: yellownailImage, alt: 'Slide 3' },
+    { imgSrc: bluenailImage, alt: "Slide 1" },
+    { imgSrc: mixnailImage, alt: "Slide 2" },
+    { imgSrc: yellownailImage, alt: "Slide 3" },
   ];
 
   return (
@@ -23,22 +25,21 @@ const HomeSwiper = () => {
       <div className="fixed-section">
         <h1>¿Estás lista<br />para tu<br />mejor<br />versión?</h1>
         <div className="buttons-container">
-          <button>Reserva una cita</button>
-          
+          <button onClick={() => setModalOpen(true)}>Reserva una cita</button>
         </div>
       </div>
 
-      {/* Contenedor principal del Swiper aa */}
+      {/* Swiper */}
       <Swiper
-        modules={[ Autoplay ]} // Agrega los módulos aquí
+        modules={[Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
         loop={true}
         autoplay={{
-          delay: 3000, // Cambia de slide cada 3 segundos
-          disableOnInteraction: false, // No se detiene al interactuar
+          delay: 4000,
+          disableOnInteraction: false,
         }}
-        speed = {1500}
+        speed={1200}
       >
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
@@ -50,6 +51,9 @@ const HomeSwiper = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Modal */}
+      <ModalTurnos isOpen={modalOpen} onClose={() => setModalOpen(false)} servicios={servicios} />
     </div>
   );
 };
