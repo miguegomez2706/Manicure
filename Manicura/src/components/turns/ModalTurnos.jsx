@@ -9,7 +9,7 @@ const ModalTurnos = ({ isOpen, onClose, servicios }) => {
         <button className="close-btn" onClick={onClose}>
           ✖
         </button>
-        <h1>Servicios disponibles</h1>
+        <h1 className="titulo">Servícios disponíbles.</h1>
 
         {servicios.map((servicio, index) => (
           <div key={index} className="servicio">
