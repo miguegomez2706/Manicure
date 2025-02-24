@@ -26,6 +26,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    max-height: 100vh;
+    overflow-y: auto;
   }
   
   .close-btn {
@@ -42,15 +45,29 @@
 /* Estilos para cada servicio */
 .servicio {
   padding: 20px 0;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 5px solid rgba(32, 32, 32);
+  border-bottom: 3px solid rgba(32, 32, 32);
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
-
+.titulo {
+  padding: 20px 0;
+  border-bottom: 5px solid rgba(32, 32, 32);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 3rem;
+}
   
+  
+
+
   .servicio h2 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -64,13 +81,13 @@
   .servicio button {
     margin-top: 10px;
     padding: 10px;
-    background-color: #007bff;
+    background-color: rgba(32, 32, 32);
     color: white;
     border: none;
     cursor: pointer;
   }
   
   .servicio button:hover {
-    background-color: #0056b3;
+    background-color: rgb(58, 73, 77);
   }
   
