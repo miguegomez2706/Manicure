@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import icon from "../../../assets/image/icono/icono.ico";
-import Modal from "../../atoms/Modal";
+// import Modal from "../../atoms/Modal";
 
 const NavBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -25,8 +25,8 @@ const NavBar = () => {
             viewBox="0 0 20 20"
             fill="currentColor"
             className="size-5 lg:hidden m-4 cursor-pointer"
-            // onClick={mostrarMenu}
-            onClick={<Modal />} // esto modificque que no anda
+            onClick={mostrarMenu}
+            // onClick={<Modal />} // esto modificque que no anda
           >
             <path
               fillRule="evenodd"
@@ -46,7 +46,7 @@ const NavBar = () => {
               Início{" "}
             </a>
             <a href="#" className="lg:mr-7">
-              Sobre nosotros
+              Cursos
             </a>
             <a href="#" className="lg:mr-7">
               Sobre nosótros

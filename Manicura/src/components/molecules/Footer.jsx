@@ -10,9 +10,9 @@ const Footer = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               className=""
               viewBox="0 0 24 24"
             >
@@ -28,7 +28,7 @@ const Footer = () => {
           {/* <span className="inline-flex gap-x-3 justify-center sm:ml-auto sm:mt-0 mt-4  sm:justify-start"> */}
           <a href="https://www.facebook.com/profile.php?id=100076907267919&mibextid=LQQJ4d">
             <svg
-              class="w-6 text-slate-900 fill-current duration-100 hover:text-[#1DA1F2]"
+              className="w-6 text-slate-900 fill-current duration-100 hover:text-[#1DA1F2]"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ const Footer = () => {
           </a>
           <a href="https://www.instagram.com/romina_gomez_nails_art/">
             <svg
-              class="w-6 text-slate-900 fill-current duration-300 hover:text-[#E4405F]"
+              className="w-6 text-slate-900 fill-current duration-300 hover:text-[#E4405F]"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const Footer = () => {
           </a>
           <a href="#">
             <svg
-              class="w-6 text-slate-900 fill-current duration-300 hover:text-black"
+              className="w-6 text-slate-900 fill-current duration-300 hover:text-black"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const Footer = () => {
           </a>
           <a href="https://www.tiktok.com/@rominagomeznails?_t=8pOcqQfHLSY&_r=1">
             <svg
-              class="w-6 text-slate-900 fill-current duration-300 hover:text-[#6a76ac]"
+              className="w-6 text-slate-900 fill-current duration-300 hover:text-[#6a76ac]"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ const Footer = () => {
           </a>
           <a href="#">
             <svg
-              class="w-6 text-slate-900 fill-current duration-300 hover:text-[#0077b5]"
+              className="w-6 text-slate-900 fill-current duration-300 hover:text-[#0077b5]"
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"

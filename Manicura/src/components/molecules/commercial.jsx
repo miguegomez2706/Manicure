@@ -31,7 +31,6 @@
 // export default Commercial;
 
 
-import React from "react";
 import Btn from "../atoms/Btn";
 import img1 from "../../assets/image/semipermanente/semi6.jpeg";
 
