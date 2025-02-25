@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <nav className="sticky top-0 bg-gray-200 w-[100%] z-50">
-      <div className="md:px-20 lg:px-44 py-4 flex items-center -ml-3 md:-ml-6">
+      <div className="md:px-20 lg:px-44 flex items-center md:-ml-6">
         <div className="flex flex-grow items-center ">
           <img src={icon} alt="" className="w-20 h-20" />
           <a href="" className="font-style: italic">
