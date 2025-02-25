@@ -140,7 +140,7 @@ html, body {
 
     .fixed-section {
         width: 40% !important;
-        margin:-100px 0px 100px 100px ;
+        margin-bottom: 100px;
         background-color: rebeccapurple;
     }
 
@@ -155,12 +155,14 @@ html, body {
 
 @media (max-width: 768px) {
     .home-swiper-container {
-        margin-top: -100px;
+        height: 100vh;
     }
 
-    .fixed-section {    
-        top: 80% !important;
-        z-index: 10000 !important;
+    .fixed-section {   
+        height: 100vh;
+        top: 100% !important;
+        left: 10%;
+        margin-bottom: 100px;
     }
 
     .fixed-section h1 {

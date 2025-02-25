@@ -6,3 +6,5 @@ const Reserva = () => {
     <div>Pagina Nueva</div>
   )
 }
+
+export default Reserva;
