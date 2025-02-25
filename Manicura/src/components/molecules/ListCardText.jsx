@@ -1,4 +1,3 @@
-import React from "react";
 import CardText from "../atoms/CardText";
 import CardTextCarrousel from "./CardTextCarrousel";
 const ListCardText = () => {

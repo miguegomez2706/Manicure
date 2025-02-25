@@ -1,44 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import "./App.css";
 import Navbar from "./components/molecules/navbar/navbar.jsx";
-import HomeSwiper from "./components/homeSwiper/HomeSwiper";
-import semi1 from "./assets/image/semipermanente/semi1.jpeg";
-import ListCard from "./components/molecules/ListCard.jsx";
-import Commercial from "./components/molecules/commercial.jsx";
-import ListCardGeneral from "./components/molecules/ListCardGeneral.jsx";
 import Footer from "./components/molecules/Footer.jsx";
-import SalonComponent from "./components/atoms/SalonComponent.jsx";
-import Reserva from "./components/turns/Reserva.jsx";
-import ListCardText from "./components/molecules/ListCardText.jsx";
-import CardText from "./components/atoms/CardText.jsx";
-import CardTextCarrousel from "./components/molecules/CardTextCarrousel.jsx";
-import Carousel from "./components/molecules/Carousel.jsx";
-// import Calendar from "./components/services/Calendar.jsx";
-
-const publicidad = {
-  img: semi1,
-  title: "titulo",
-  description: "descripcion",
-};
+import SalonPage from "./components/salonPage/SalonPage.jsx";
+import HomePage from "./components/organisms/HomePage.jsx";
+// import Reserva from "./components/turns/Reserva.jsx";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={
-          <>
-            <HomeSwiper /> 
-            <ListCard />
-            <Commercial publicidad={publicidad} />
-            <SalonComponent />
-            <ListCardGeneral />
-            <Footer />
-          </>
-        } />
-        <Route path="/reserva" element={<Reserva />} />
-      </Routes>
+      <div className="font-rale">
+        <Navbar />
+        <Routes>
+          {/* Página principal */}
+          <Route path="/" element={<HomePage />} />
+          {/* Nueva página con info del salón */}
+          <Route path="/salon" element={<SalonPage />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 }

@@ -26,7 +26,7 @@
 
 // export default ListCardGeneral;
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { imgsTotal } from "../../assets/dataStore";
 import RenderImg from "../atoms/RenderImg";
 import Modal from "../atoms/Modal";

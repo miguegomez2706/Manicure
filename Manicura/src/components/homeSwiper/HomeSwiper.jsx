@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -23,7 +23,15 @@ const HomeSwiper = () => {
     <div className="home-swiper-container">
       {/* Sección fija encima del Swiper */}
       <div className="fixed-section">
-        <h1>¿Estás lista<br />para tu<br />mejor<br />versión?</h1>
+        <h1>
+          ¿Estás lista
+          <br />
+          para tu
+          <br />
+          mejor
+          <br />
+          versión?
+        </h1>
         <div className="buttons-container">
           <button onClick={() => setModalOpen(true)}>Reserva una cita</button>
         </div>
@@ -53,10 +61,11 @@ const HomeSwiper = () => {
       </Swiper>
 
       {/* Modal */}
-      <ModalTurnos 
-                  isOpen={modalOpen} 
-                  onClose={() => setModalOpen(false)} 
-                  servicios={servicios} />
+      <ModalTurnos
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        servicios={servicios}
+      />
     </div>
   );
 };
