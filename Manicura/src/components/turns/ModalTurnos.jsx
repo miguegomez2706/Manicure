@@ -3,24 +3,27 @@ import "./ModalTurnos.css"; // Archivo de estilos
 
 const ModalTurnos = ({ isOpen, onClose, servicios }) => {
   return (
-    // Uso de ternaria!!!!
+    <body>
     <div className={`modal-overlay ${isOpen ? "open" : ""}`}>
       <div className="modal-content">
         <button className="close-btn" onClick={onClose}>
           ✖
         </button>
-        <h1 className="titulo">Servícios disponíbles.</h1>
 
+        <h1 className="titulo">Servícios disponíbles.</h1>
         {servicios.map((servicio, index) => (
           <div key={index} className="servicio">
             <h2>{servicio.nombre}</h2>
+            <hr className="servicio-linea" />
             <p>{servicio.descripcion}</p>
-            <p>Precio: ${servicio.precio}</p>
-            <button>Reservar</button>
+            <p>Precio: $ <span className="precio">{servicio.precio}</span></p>
+            <button>Reservar ahora</button>
           </div>
         ))}
       </div>
     </div>
+
+    </body>
   );
 };
 
