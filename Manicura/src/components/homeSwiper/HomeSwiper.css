@@ -140,8 +140,8 @@ html, body {
 
     .fixed-section {
         width: 40% !important;
-        top: 47%;
-        transform: translateY(-50%);
+        margin:-100px 0px 100px 100px ;
+        background-color: rebeccapurple;
     }
 
     .fixed-section h1 {
@@ -155,18 +155,12 @@ html, body {
 
 @media (max-width: 768px) {
     .home-swiper-container {
-        height: 60vh !important;
+        margin-top: -100px;
     }
 
-    .content-section {
-        width: 50%;
-        left: 5%;
-    }
-
-    .fixed-section {
-        top: 60% !important;
-        left: 50%;
-        width: 50%;
+    .fixed-section {    
+        top: 80% !important;
+        z-index: 10000 !important;
     }
 
     .fixed-section h1 {
@@ -181,13 +175,12 @@ html, body {
 
 @media (max-width: 480px) {
     .home-swiper-container {
-        height: 30vh;
+        height: 80vh !important;
     }
 
-    .content-section {
+    .fixed-section {
         width: 80%;
         right: 10%;
-        text-align: center;
     }
 
     .content-section h1 {

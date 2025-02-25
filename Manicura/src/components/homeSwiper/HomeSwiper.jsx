@@ -53,7 +53,10 @@ const HomeSwiper = () => {
       </Swiper>
 
       {/* Modal */}
-      <ModalTurnos isOpen={modalOpen} onClose={() => setModalOpen(false)} servicios={servicios} />
+      <ModalTurnos 
+                  isOpen={modalOpen} 
+                  onClose={() => setModalOpen(false)} 
+                  servicios={servicios} />
     </div>
   );
 };

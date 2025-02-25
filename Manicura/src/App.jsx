@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import Navbar from "./components/molecules/navbar/navbar.jsx";
 import HomeSwiper from "./components/homeSwiper/HomeSwiper";
@@ -7,6 +9,7 @@ import Commercial from "./components/molecules/commercial.jsx";
 import ListCardGeneral from "./components/molecules/ListCardGeneral.jsx";
 import Footer from "./components/molecules/Footer.jsx";
 import SalonComponent from "./components/atoms/SalonComponent.jsx";
+import Reserva from "./components/turns/Reserva.jsx";
 import ListCardText from "./components/molecules/ListCardText.jsx";
 import CardText from "./components/atoms/CardText.jsx";
 import CardTextCarrousel from "./components/molecules/CardTextCarrousel.jsx";
@@ -21,18 +24,22 @@ const publicidad = {
 
 function App() {
   return (
-    <div className="font-rale">
-      {/* <Calendar /> */}
+    <Router>
       <Navbar />
-      <HomeSwiper /> 
-      {/* <Carousel /> */}
-      <ListCard />
-      <Commercial publicidad={publicidad} />
-      <SalonComponent />
-      {/* <ListCardText /> */}
-      <ListCardGeneral />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <HomeSwiper /> 
+            <ListCard />
+            <Commercial publicidad={publicidad} />
+            <SalonComponent />
+            <ListCardGeneral />
+            <Footer />
+          </>
+        } />
+        <Route path="/reserva" element={<Reserva />} />
+      </Routes>
+    </Router>
   );
 }
 
