@@ -30,22 +30,21 @@
 
 // export default Commercial;
 
-
 import Btn from "../atoms/Btn";
 import img1 from "../../assets/image/semipermanente/semi6.jpeg";
 
 const Commercial = () => {
   return (
-    <div className="px-4 md:px-20 lg:px-44 pt-40 py-20">
+    <div className="px-4 md:px-20 lg:px-44 pt-20 py-10">
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 border border-gray-200 rounded-lg overflow-hidden shadow-lg">
-        <div className="">
+        <div className="order-1 sm:order-2">
           <img
             src={img1}
             alt="Commercial Image"
             className="h-56 md:h-80 lg:h-full w-full object-cover transition-transform duration-300 hover:scale-105"
           />
         </div>
-        <div className="flex flex-col justify-center items-center p-6 md:p-10">
+        <div className="flex flex-col justify-center items-center p-6 md:p-10 order-2 sm:order-1">
           <p className="font-rale text-base md:text-2xl lg:text-3xl text-center pb-3 xl:pb-6">
             Mejores Precios
           </p>

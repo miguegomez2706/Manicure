@@ -5,12 +5,12 @@ const SalonComponent = () => {
   const navigate = useNavigate(); // Hook para la navegación
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
-      <div className="order-1">
+    <div className="grid grid-cols-1 md:grid-cols-2 px-4">
+      <div className="order-2 flex flex-col items sm:justify-center sm:items-center">
         <h2 className="mb-10 text-5xl font-extralight">
           Más que un Salón de Uñas:
         </h2>
-        <p className="text-lg mb-6 w-1/2">
+        <p className="text-lg mb-6 sm:w-1/2">
           En Only Nails, nos enorgullece ofrecer más que servicios de manicura y
           pedicura. Con 30 años de experiencia en la industria, hemos
           perfeccionado el arte de embellecer tus manos y pies con pasión y
@@ -23,12 +23,12 @@ const SalonComponent = () => {
           ¡Conócenos!
         </button>
       </div>
-      <div className="relative w-1/2 h-1/2 order-2">
+      <div className="relative order-1">
         <div className="overflow-hidden">
           <img
             src={imgLocal}
             alt="Salon Image"
-            className="object-cover w-full h-4/6"
+            className="object-cover w-full p-10 h-150"
           />
         </div>
       </div>
