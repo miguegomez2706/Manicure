@@ -11,8 +11,8 @@ const publicidad = {
 
 const HomePage = () => {
   return (
-    // <HomeSwiper />
     <>
+      {/* <HomeSwiper /> */}
       <ListCard />
       <Commercial publicidad={publicidad} />
       <SalonComponent />
