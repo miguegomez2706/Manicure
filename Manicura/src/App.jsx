@@ -4,7 +4,8 @@ import Navbar from "./components/molecules/navbar/navbar.jsx";
 import Footer from "./components/molecules/Footer.jsx";
 import SalonPage from "./components/salonPage/SalonPage.jsx";
 import HomePage from "./components/organisms/HomePage.jsx";
-import Reserva from "./components/turns/Reserva.jsx"
+import Reserva from "./components/turns/Reserva.jsx";
+import ModalTurnos from "./components/turns/ModalTurnos.jsx";
 // import Reserva from "./components/turns/Reserva.jsx";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           {/* Nueva página con info del salón */}
           <Route path="/salon" element={<SalonPage />} />
           <Route path="/reserva" element={<Reserva />} />
+          <Route path="/modal" element={<ModalTurnos />} />
         </Routes>
         <Footer />
       </div>

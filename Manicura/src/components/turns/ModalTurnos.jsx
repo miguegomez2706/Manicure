@@ -26,10 +26,7 @@ const ModalTurnos = ({ isOpen, onClose, servicios }) => {
                 rounded={true}
                 type={"primary"}
                 buttonText={"Reservar Ahora!"}
-                onClick={() => navigate("/reserva")
-                  
-                }
-                
+                onClick={() => navigate("/reserva")}
               />
             </div>
           ))}

@@ -1,10 +1,5 @@
-import { react } from "react";
-
 const Reserva = () => {
-
-  return (
-    <div>Pagina Nueva</div>
-  )
-}
+  return <div>Pagina Nueva</div>;
+};
 
 export default Reserva;
