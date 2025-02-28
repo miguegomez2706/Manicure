@@ -1,4 +1,3 @@
-
 html, body {
     margin: 0;
     padding: 0;
@@ -7,46 +6,19 @@ html, body {
     font-family: var(--body-font2);
 }
 
-.home-swiper-container {
-    width: 100vw;
-    height: 80vh;
-    overflow: hidden;
-    position: relative;
-    background-color: var(--body-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-swiper-slide {
-    display: flex;
-    width: 80%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--body-color);
-    margin: 0 auto;
-}
-
-.image-section {
-    width: 100%;
-    height: 100%;
-}
-
-.image-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translateY(-10%);
+/* Nuevo contenedor principal */
+.home-swiper-wrapper {
+    position: relative; /* Contenedor principal relativo */
+    height: 100vh; /* Ocupa toda la pantalla */
 }
 
 /* Sección fija encima del Swiper */
 .fixed-section {
     position: absolute;
-    top: 50%;
-    left: 73%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    top: 10%; /* Ajusta la posición vertical */
+    left: 70%; /* Centrado horizontal */
+    transform: translateX(-50%);
+    z-index: 10; /* Asegura que esté por encima del swiper */
     text-align: center;
     width: 20%;
     padding: 20px;
@@ -81,7 +53,80 @@ html, body {
     background-color: var(--button-color-hover);
 }
 
-/* Contenido del slider */
+/* Contenedor del Swiper */
+.home-swiper-container {
+    width: 100vw;
+    height: 80vh; /* Ajusta la altura según tu diseño */
+    overflow: hidden;
+    position: relative;
+    background-color: var(--body-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-swiper-slide {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-color);
+    margin: 0 auto;
+}
+
+.image-section {
+    width: 100%;
+    height: 100%;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateY(-10%);
+}
+
+
+@media (max-width: 480px) {
+
+    .home-swiper-wrapper {
+        height: 80vh;
+    }
+    
+    .fixed-section {
+        position: absolute;
+        width: 100%;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 120px;
+        margin: 0;
+    }
+    
+    .fixed-section h1 {
+        font-size: 3rem;
+        color: black;
+        text-align: center;
+        color: var(--title-color);
+    }
+
+    .buttons-container button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    
+    .home-swiper-container {
+        height: 30vh !important;
+        width: 100vw !important;
+    }
+
+    .home-swiper-slide {
+        width: 100vw;
+    }
+}
+
+/* Contenido del slider 
 .content-section {
     position: absolute;
     z-index: 2;
@@ -126,7 +171,7 @@ html, body {
     background-color: var(--first-color);
 }
 
-/* ===== MEDIA QUERIES ===== */
+/* ===== MEDIA QUERIES ===== 
 
 @media (max-width: 1024px) {
     .home-swiper-container {
@@ -205,3 +250,4 @@ html, body {
         padding: 8px 12px;
     }
 }
+*/
