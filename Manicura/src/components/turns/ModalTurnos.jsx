@@ -8,9 +8,11 @@ const ModalTurnos = ({ isOpen, onClose, servicios }) => {
     <>
       <div className={`modal-overlay ${isOpen ? "open" : ""}`}>
         <div className="modal-content">
+          <div className="close-btn-contenedor">
           <button className="close-btn" onClick={onClose}>
             ✖
           </button>
+          </div>
 
           <h1 className="titulo">Servícios disponíbles.</h1>
           {servicios.map((servicio, index) => (
@@ -21,8 +23,8 @@ const ModalTurnos = ({ isOpen, onClose, servicios }) => {
               <p>
                 Precio: $ <span className="precio">{servicio.precio}</span>
               </p>
-              {/* <button>Reservar ahora</button> */}
-              <Btn
+              
+              <Btn 
                 rounded={true}
                 type={"primary"}
                 buttonText={"Reservar Ahora!"}

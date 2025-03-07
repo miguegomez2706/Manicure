@@ -21,25 +21,41 @@
   .modal-content {
     background: var(--body-color);
     width: 85%;
-    padding: 20px;
+    padding: 0px;
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     max-height: 100vh;
     overflow-y: auto;
+    position: relative;
+  }
+  
+  .close-btn-contenedor {
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Mueve la "X" a la derecha */
+    padding: 0; 
+    top: 0;
+    right: 0;
+    background-color: var(--body-color);
   }
   
   .close-btn {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    font-size: 1.5rem;
     background: none;
     border: none;
+    font-size: 1.8rem;
     cursor: pointer;
-    color: white;
+    color: var(--nav-color); /* Ajusta según tu diseño */
+    padding: 5px 10px;
+    transition: color 0.3s ease;
   }
+  
+  .close-btn:hover {
+    color: var(--title-color);
+  }
+  
   
 /* Estilos para cada servicio */
 .servicio {
@@ -107,6 +123,67 @@
   }
   
 
+  /* RESPONSIVE */
+
+  /* 375PX */
+  @media (max-width: 375px) {
+    
+    .modal-overlay {
+      right: -100%;
+      width: 100%;
+    }
+
+    .modal-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .servicio {
+      padding: 10px;
+      width: 350px;
+      height: 350px;  
+      align-items: center;  
+      gap: 3px;
+      border: 1px solid #000;
+    }
+
+    .servicio h2 {
+      font-size: 1.7rem;
+      margin: 0;
+      color: var(--title-color);
+      font-weight: 400;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .servicio p {
+      margin: 0;  
+      font-size: 1.2rem;
+      color: var(--title-color);
+      text-align: center;  
+    }
+
+    .servicio button {
+      margin: 0; 
+      padding: 15px;
+      background-color: var(--button-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 60%;  
+      text-align: center; 
+    }
+
+    .servicio button:hover {
+      background-color: var(--button-color-hover);
+    }
+    .close-btn {
+      color: #000;
+    }
+  }
 
   @media (max-width: 480px) {
 
