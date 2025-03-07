@@ -1,9 +1,12 @@
-import { info } from "autoprefixer";
+// import { info } from "autoprefixer";
 import img1 from "../image/semipermanente/semi1.jpeg";
 import img2 from "../image/semipermanente/semi2.jpeg";
 import img3 from "../image/semipermanente/semi3.jpeg";
 import img4 from "../image/semipermanente/semi4.jpeg";
 import img7 from "../image/semipermanente/semi7.jpeg";
+import bluenailImage from "../../assets/image/swiper/bluenail.jpg";
+import mixnailImage from "../../assets/image/swiper/mixnail.jpg";
+import yellownailImage from "../../assets/image/swiper/yellownail.jpg";
 
 const imgs = [
   {
@@ -24,6 +27,12 @@ const imgs = [
     info: "La verdad no tengo idea cual es la diferencia con las otras pero bueno es increible lo linda que es la verdad no teiene sentido en hermoso",
     cssClass: "font-semibold",
   },
+];
+
+const slidesData = [
+  { imgSrc: bluenailImage, alt: "Slide 1" },
+  { imgSrc: mixnailImage, alt: "Slide 2" },
+  { imgSrc: yellownailImage, alt: "Slide 3" },
 ];
 
 const imgsTotal = [
@@ -52,4 +61,4 @@ const imgsTotal = [
     image: img7,
   },
 ];
-export { imgs, imgsTotal };
+export { imgs, imgsTotal, slidesData };

@@ -20,7 +20,9 @@ const HomeSwiper = () => {
   ];
 
   return (
-    <div className="home-swiper-wrapper"> {/* Nuevo contenedor */}
+    <div className="home-swiper-wrapper">
+      {" "}
+      {/* Nuevo contenedor */}
       {/* Sección fija encima del Swiper */}
       <div className="fixed-section">
         <h1>
@@ -36,7 +38,6 @@ const HomeSwiper = () => {
           <button onClick={() => setModalOpen(true)}>Reserva una cita</button>
         </div>
       </div>
-
       {/* Contenedor del Swiper */}
       <div className="home-swiper-container">
         <Swiper
@@ -61,7 +62,6 @@ const HomeSwiper = () => {
           ))}
         </Swiper>
       </div>
-
       {/* Modal */}
       <ModalTurnos
         isOpen={modalOpen}

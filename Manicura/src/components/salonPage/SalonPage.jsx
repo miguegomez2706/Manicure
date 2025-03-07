@@ -2,18 +2,26 @@
 import imgs from "../../assets/image/semipermanente/semi6.jpeg";
 // import imgs from "../../assets/image/comunes/imagenLocal.jpeg";
 import Mapa from "../map/Mapa";
+import Perfil from "../nosotros/Perfil";
 const SalonPage = () => {
   // const navigate = useNavigate();
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100 p-10">
+    <div className="min-h-screen flex flex-col bg-gray-100 p-10 md:px-44">
       <section className="grid grid-cols-2">
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="text-4xl font-bold mb-6">Sobre Nostros</h1>
+        <div className="flex flex-col pl-6 items-start justify-center order-2">
+          <h1 className="text-6xl font-medium mb-6">Sobre Nostros</h1>
           <p className="text-lg text-gray-700 max-w-2xl">
-            En Only Nails, ofrecemos una experiencia única en el cuidado de tus
+            {/* En Only Nails, ofrecemos una experiencia única en el cuidado de tus
             uñas. Con más de 30 años en la industria, nuestro equipo de expertos
             está comprometido con la calidad y el bienestar de nuestros
-            clientes.
+            clientes. */}
+            En Only Nails, nuestra historia se entrelaza con la belleza y la
+            excelencia en el cuidado de uñas. Desde nuestros inicios en
+            Monterrey, Nuevo León, nos hemos dedicado a proporcionar servicios
+            de manicura y pedicura excepcionales en múltiples ubicaciones,
+            incluyendo Plaza Fiesta San Agustín, Paseo San Pedro, Galerías
+            Monterrey, Plaza Cumbres, Plaza Fiesta Anáhuac, Esfera City Center y
+            nuestra filosofía se basa en que la formación es la clave del éxito.
           </p>
           <button
             className="mt-6 px-6 py-2 text-white bg-gray-800 rounded hover:bg-gray-700"
@@ -22,53 +30,68 @@ const SalonPage = () => {
             Volver
           </button>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center order-1">
           <img
             src={imgs}
             alt=""
-            className="h-120 rounded-md object-contain overflow-hidden shadow-xl"
+            className="h-120 rounded-md object-cover overflow-hidden shadow-xl"
           />
         </div>
       </section>
-      <section>
-        <div className="grid grid-cols-2 p-4">
-          <div>
-            <h1 className="flex text-2xl font-bold justify-center mb-4">
-              Ubicación del Local
-            </h1>
+      <section className="mt-40">
+        <h1 className="flex text-5xl font-normal items-center justify-center mb-4">
+          ¡Descubre Nuestra Sucursal!
+        </h1>
+        <div className="grid grid-cols-2">
+          <div className="order-2">
             <div className="">
               <Mapa />
             </div>
           </div>
-          <div className="flex items-center justify-center font-semibold ">
-            Datos: Necochea 307 OF 3, H3500 Resistencia, Chaco agregar mas datos
+          <div className="flex order-1">
+            <div className="p-14">
+              <h1 className="text-5xl flex top-0">Resistencia</h1>
+              <p className="mx-5 my-3">
+                <span className="text-yellow-500 text-3xl">⭐</span>
+                <span className="text-yellow-500 text-3xl">⭐</span>
+                <span className="text-yellow-500 text-3xl">⭐</span>
+                <span className="text-yellow-500 text-3xl">⭐</span>
+                <span className="text-yellow-500 text-3xl">⭐</span>
+              </p>
+              <div className="my-10">
+                <div className="flex mt-5">
+                  <p className="font-semibold">Teléfono:</p>
+                  <p className="ml-2">+54 362 494-0856</p>
+                </div>
+                <div className="flex mt-5 ">
+                  <p className="font-semibold">Horarios: </p>
+                  <p className="ml-2">11:00 AM - 8:00 PM Lunes a Sabado</p>
+                </div>
+                <div className="flex mt-5 ">
+                  <p className="font-semibold">Direccion: </p>
+                  <p className="ml-2">Necochea 307 OF 3, H3500 Resistencia</p>
+                </div>
+                <div className="flex mt-5 ">
+                  <p className="font-semibold">Email: </p>
+                  <p className="ml-2">Nails.Art@gmail.com</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-20 pt-20 py-10">
+        <div className=" max-w-80 overflow-hidden">
+          <Perfil />
+        </div>
+        <div className="max-h-96 max-w-80 overflow-hidden">
+          <Perfil />
+        </div>
+        <div className="max-h-96 max-w-80 overflow-hidden">
+          <Perfil />
+        </div>
+      </section>
     </div>
-
-    // <section className="min-h-screen">
-    //   <div className="flex ">
-    //     <div>
-    //       <h1 className="text-4xl font-bold mb-6">Acerca de Nuestro Salón</h1>
-    //       <p className="text-lg text-gray-700 max-w-2xl text-center">
-    //         En Only Nails, ofrecemos una experiencia única en el cuidado de tus
-    //         uñas. Con más de 30 años en la industria, nuestro equipo de expertos
-    //         está comprometido con la calidad y el bienestar de nuestros
-    //         clientes.
-    //       </p>
-    //       <button
-    //         className="mt-6 px-6 py-2 text-white bg-gray-800 rounded hover:bg-gray-700"
-    //         onClick={() => navigate("/")} // Para volver atrás
-    //       >
-    //         Volver
-    //       </button>
-    //     </div>
-    //     <div>
-    //       <img src={imgs} alt="" className="object-cover w-full p-10 h-150" />
-    //     </div>
-    //   </div>
-    // </section>
   );
 };
 

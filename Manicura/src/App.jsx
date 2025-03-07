@@ -6,7 +6,6 @@ import SalonPage from "./components/salonPage/SalonPage.jsx";
 import HomePage from "./components/organisms/HomePage.jsx";
 import Reserva from "./components/turns/Reserva.jsx";
 import ModalTurnos from "./components/turns/ModalTurnos.jsx";
-// import Reserva from "./components/turns/Reserva.jsx";
 
 function App() {
   return (
@@ -14,9 +13,7 @@ function App() {
       <div className="font-rale">
         <Navbar />
         <Routes>
-          {/* Página principal */}
           <Route path="/" element={<HomePage />} />
-          {/* Nueva página con info del salón */}
           <Route path="/salon" element={<SalonPage />} />
           <Route path="/reserva" element={<Reserva />} />
           <Route path="/modal" element={<ModalTurnos />} />
