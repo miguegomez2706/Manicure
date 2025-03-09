@@ -20,7 +20,7 @@ const HomeSwiper = () => {
   ];
 
   return (
-    <div className="home-swiper-container">
+    <div className="home-swiper-wrapper"> {/* Nuevo contenedor */}
       {/* Sección fija encima del Swiper */}
       <div className="fixed-section">
         <h1>
@@ -37,28 +37,30 @@ const HomeSwiper = () => {
         </div>
       </div>
 
-      {/* Swiper */}
-      <Swiper
-        modules={[Autoplay]}
-        spaceBetween={0}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        speed={1200}
-      >
-        {slidesData.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="home-swiper-slide">
-              <div className="image-section">
-                <img src={slide.imgSrc} alt={slide.alt} />
+      {/* Contenedor del Swiper */}
+      <div className="home-swiper-container">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={0}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          speed={1200}
+        >
+          {slidesData.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="home-swiper-slide">
+                <div className="image-section">
+                  <img src={slide.imgSrc} alt={slide.alt} />
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       {/* Modal */}
       <ModalTurnos

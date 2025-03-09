@@ -1,9 +1,12 @@
 import { useState } from "react";
 import icon from "../../../assets/image/icono/icono.ico";
+import { useNavigate } from "react-router-dom";
+// import HomePage from "../../organisms/HomePage";
 // import Modal from "../../atoms/Modal";
 
 const NavBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
+  const navigate = useNavigate();
 
   const mostrarMenu = () => {
     setMenuVisible(!menuVisible);
@@ -15,7 +18,11 @@ const NavBar = () => {
       <div className="md:px-20 lg:px-44 flex items-center md:-ml-6">
         <div className="flex flex-grow items-center ">
           <img src={icon} alt="" className="w-20 h-20" />
-          <a href="" className="font-style: italic">
+          <a
+            onClick={() => navigate("/")}
+            href=""
+            className="font-style: italic"
+          >
             Nails Art
           </a>
         </div>
@@ -42,16 +49,20 @@ const NavBar = () => {
           } left-0 flex-grow justify-between lg:w-auto lg:block lg:relative lg:top-0 top-20 py-5 px-11`}
         >
           <div className="flex flex-col lg:flex-row ">
-            <a href="#" className="lg:mr-7">
+            <a onClick={() => navigate("/")} href="#" className="lg:mr-7">
               Início{" "}
             </a>
-            <a href="#" className="lg:mr-7">
+            <a onClick={() => navigate("/")} href="#" className="lg:mr-7">
               Cursos
             </a>
-            <a href="#" className="lg:mr-7">
+            <a onClick={() => navigate("/salon")} href="#" className="lg:mr-7">
               Sobre nosótros
             </a>
-            <a href="#" className="lg:mr-7">
+            <a
+              onClick={() => navigate("/reserva")}
+              href="#"
+              className="lg:mr-7"
+            >
               Servícios
             </a>
           </div>
