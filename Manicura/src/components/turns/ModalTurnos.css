@@ -1,202 +1,120 @@
 .modal-overlay {
   font-family: "Playfair Display", serif;
-    position: fixed;
-    top: 0;
-    right: -50%; /* Oculta la modal */
-    width: 50%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-    transition: right 0.4s ease-in-out;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modal-overlay.open {
-    right: 0; /* Muestra la modal */
-  }
-  
-  .modal-content {
-    background: var(--body-color);
-    width: 85%;
-    padding: 0px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-height: 100vh;
-    overflow-y: auto;
-    position: relative;
-  }
-  
-  .close-btn-contenedor {
-    position: sticky;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start; /* Mueve la "X" a la derecha */
-    padding: 0; 
-    top: 0;
-    right: 0;
-    background-color: var(--body-color);
-  }
-  
-  .close-btn {
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: var(--nav-color); /* Ajusta según tu diseño */
-    padding: 5px 10px;
-    transition: color 0.3s ease;
-  }
-  
-  .close-btn:hover {
-    color: var(--title-color);
-  }
-  
-  
-/* Estilos para cada servicio */
-.servicio {
-  padding: 5px 0;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.servicio-linea {
-  width: 93%;  /* Ocupará todo el ancho del modal */
+.modal-overlay.open {
+  right: 0;
+}
+
+.modal-content {
+  background: var(--body-color);
+  width: 85%;
+  max-height: 100vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.close-btn-contenedor {
+  display: flex;
+  justify-content: flex-start;
+  position: sticky;
+  top: 0;
+  background: var(--body-color);
+  z-index: 10;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  background: none;
   border: none;
-  border-top: 2px solid var(--container-color); /* Línea separadora */
-  margin: 15px 0; /* Espaciado superior e inferior */
-  margin: 15px auto; /* Centrado horizontal */
+  font-size: 1rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+
+.close-btn:hover {
+  color: var(--title-color);
 }
 
 .titulo {
-  font-family: "Playfair Display", serif;
-  padding: 20px 0;
-  color: var(--title-color);
-  border-bottom: 3px solid rgba(32, 32, 32);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  font-size: 3.1rem;
-  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
   font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgba(32, 32, 32);
 }
 
-  .servicio h2 {
-    font-size: 1.7rem;
-    margin: 50px 0px 0px 30px;
-    color: var(--title-color);
-    font-weight: 400;
-  }
-  
-  .servicio p {
-    margin: 5px 0px 0px 30px;
-    font-size: 1.2rem;
-    color: var(--title-color);
-  }
+.servicio {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #000;
+  text-align: center;
+}
 
-  .precio {
-    color: var(--first-color);
-  }
-  
-  
-  .servicio button {
-    margin: 30px 0px 0px 30px;
-    padding: 15px;
-    background-color: var(--button-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 25%;
-  }
-  
-  .servicio button:hover {
-    background-color: var(--button-color-hover);
-  }
-  
+.servicio h2 {
+  font-size: 1.7rem;
+  margin: 0;
+}
 
-  /* RESPONSIVE */
+.servicio p {
+  font-size: 1.2rem;
+  margin: 0;
+}
 
-  /* 375PX */
-  @media (max-width: 375px) {
-    
-    .modal-overlay {
-      right: -100%;
-      width: 100%;
-    }
+.servicio-linea {
+  width: 100%;
+  border: none;
+  border-top: 2px solid var(--container-color);
+}
 
-    .modal-content {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
+.servicio button {
+  padding: 10px;
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  margin: auto;
+}
 
-    .servicio {
-      padding: 10px;
-      width: 350px;
-      height: 350px;  
-      align-items: center;  
-      gap: 3px;
-      border: 1px solid #000;
-    }
+.servicio button:hover {
+  background-color: var(--button-color-hover);
+}
 
-    .servicio h2 {
-      font-size: 1.7rem;
-      margin: 0;
-      color: var(--title-color);
-      font-weight: 400;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .servicio p {
-      margin: 0;  
-      font-size: 1.2rem;
-      color: var(--title-color);
-      text-align: center;  
-    }
-
-    .servicio button {
-      margin: 0; 
-      padding: 15px;
-      background-color: var(--button-color);
-      color: white;
-      border: none;
-      cursor: pointer;
-      width: 60%;  
-      text-align: center; 
-    }
-
-    .servicio button:hover {
-      background-color: var(--button-color-hover);
-    }
-    .close-btn {
-      color: #000;
-    }
+/* Responsividad */
+@media (max-width: 768px) {
+  .modal-overlay {
+    right: -100%;
+    width: 100%;
   }
 
-  @media (max-width: 480px) {
-
-    .modal-overlay {
-      right: -100%;
-      width: 100%;
-    }
-
-    .modal-content {
-      width: 100%;
-    }
-
-    .close-btn {
-      color: #000;
-    }
+  .modal-content {
+    width: 100%;
+    padding: 10px;
   }
+
+  .servicio {
+    grid-template-rows: auto auto auto auto auto;
+    gap: 5px;
+  }
+}
