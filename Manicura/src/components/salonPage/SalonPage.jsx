@@ -80,14 +80,14 @@ const SalonPage = () => {
           </div>
         </div>
       </section>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-20 pt-20 py-10">
-        <div className=" max-w-80 overflow-hidden">
+      <section className="lg:grid-cols-3 px-4 md:px-20 pt-20 py-10  grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div>
           <Perfil />
         </div>
-        <div className="max-h-96 max-w-80 overflow-hidden">
+        <div>
           <Perfil />
         </div>
-        <div className="max-h-96 max-w-80 overflow-hidden">
+        <div>
           <Perfil />
         </div>
       </section>
