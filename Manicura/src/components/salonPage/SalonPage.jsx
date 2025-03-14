@@ -31,13 +31,13 @@ const SalonPage = () => {
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 mt-12 gap-10">
           <div>
-            <Perfil />
+            <Perfil name="Romina Gomez" title="Manicurista" />
           </div>
           <div>
-            <Perfil />
+            <Perfil name="Ceferina Petrona" title="Pestañista" />
           </div>
           <div>
-            <Perfil />
+            <Perfil name="Eufemia Hipólito" title="Piecista" />
           </div>
         </div>
       </section>

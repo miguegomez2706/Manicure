@@ -1,7 +1,6 @@
-import Btn from "../atoms/Btn";
 import img1 from "../../assets/image/semipermanente/semi3.jpeg";
 
-const Perfil = () => {
+const Perfil = ({ title, name }) => {
   return (
     <div className="flex justify-center">
       <div className="grid grid-cols-1 w-full max-w-80 gap-4 border border-gray-200 rounded-lg overflow-hidden shadow-lg">
@@ -13,10 +12,10 @@ const Perfil = () => {
           />
         </div>
         <div className="flex flex-col justify-center items-center p-6 md:p-10 order-2 ">
-          <p className="font-rale text-base md:text-2xl lg:text-3xl text-center pb-3 xl:pb-6">
-            Mejores Precios
+          <p className="font-rale text-2xl lg:text-3xl text-center pb-3 xl:pb-6">
+            {name}
           </p>
-          <Btn rounded={true} type={"primary"} buttonText={"Ver Precios!"} />
+          <p>{title}</p>
         </div>
       </div>
     </div>
