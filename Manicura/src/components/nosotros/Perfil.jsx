@@ -4,7 +4,7 @@ import img1 from "../../assets/image/semipermanente/semi3.jpeg";
 const Perfil = () => {
   return (
     <div className="flex justify-center">
-      <div className="grid grid-cols-1 max-w-80 gap-4 border border-gray-200 rounded-lg overflow-hidden shadow-lg">
+      <div className="grid grid-cols-1 w-full max-w-80 gap-4 border border-gray-200 rounded-lg overflow-hidden shadow-lg">
         <div className="order-1 ">
           <img
             src={img1}
