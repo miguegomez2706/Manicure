@@ -7,8 +7,5 @@ const servicios = [
     { nombre: "Tinte de Cabello", descripcion: "Cambio de color.", precio: 40 },
   ];
   
-  // Exportamos el arreglo de servicios para poder usarlo en otros archivos
-  export default servicios;
 
-  // comentario
-  
+  export default servicios;
