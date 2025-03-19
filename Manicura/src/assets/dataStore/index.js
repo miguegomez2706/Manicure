@@ -61,4 +61,10 @@ const imgsTotal = [
     image: img7,
   },
 ];
-export { imgs, imgsTotal, slidesData };
+
+const perfiles = [
+  { name: "Romina Gomez", title: "Manicurista" },
+  { name: "Ceferina Petrona", title: "Pestañista" },
+  { name: "Eufemia Hipólito", title: "Piecista" },
+];
+export { imgs, imgsTotal, slidesData, perfiles };

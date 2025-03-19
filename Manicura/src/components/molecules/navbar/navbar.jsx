@@ -52,7 +52,7 @@ const NavBar = () => {
             <a onClick={() => navigate("/")} href="#" className="lg:mr-7">
               Início{" "}
             </a>
-            <a onClick={() => navigate("/")} href="#" className="lg:mr-7">
+            <a onClick={() => navigate("/cursos")} href="#" className="lg:mr-7">
               Cursos
             </a>
             <a onClick={() => navigate("/salon")} href="#" className="lg:mr-7">
