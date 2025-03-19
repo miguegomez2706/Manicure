@@ -48,11 +48,11 @@ const NavBar = () => {
             menuVisible ? "block bg-white w-full " : "hidden"
           } left-0 flex-grow justify-between lg:w-auto lg:block lg:relative lg:top-0 top-20 py-5 px-11`}
         >
-          <div className="flex flex-col lg:flex-row ">
+          <div className="flex flex-col lg:flex-row">
             <a onClick={() => navigate("/")} href="#" className="lg:mr-7">
               Início{" "}
             </a>
-            <a onClick={() => navigate("/")} href="#" className="lg:mr-7">
+            <a onClick={() => navigate("/cursos")} href="#" className="lg:mr-7">
               Cursos
             </a>
             <a onClick={() => navigate("/salon")} href="#" className="lg:mr-7">

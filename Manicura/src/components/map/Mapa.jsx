@@ -23,10 +23,7 @@ const Mapa = () => {
         zoom={30}
         className="h-full w-full rounded-lg"
       >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={posicion} icon={redIcon}>
           <Popup>¡Aquí está el local! 📍</Popup>
         </Marker>
