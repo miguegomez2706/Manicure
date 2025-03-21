@@ -4,10 +4,7 @@ import img2 from "../image/semipermanente/semi2.jpeg";
 import img3 from "../image/semipermanente/semi3.jpeg";
 import img4 from "../image/semipermanente/semi4.jpeg";
 import img7 from "../image/semipermanente/semi7.jpeg";
-import bluenailImage from "../../assets/image/swiper/bluenail.jpg";
-import mixnailImage from "../../assets/image/swiper/mixnail.jpg";
-import yellownailImage from "../../assets/image/swiper/yellownail.jpg";
-
+import yellownailImage from "../../assets/image/swiper/swiper.jpg";
 const imgs = [
   {
     image: img1,
@@ -30,8 +27,8 @@ const imgs = [
 ];
 
 const slidesData = [
-  { imgSrc: bluenailImage, alt: "Slide 1" },
-  { imgSrc: mixnailImage, alt: "Slide 2" },
+  { imgSrc: yellownailImage, alt: "Slide 1" },
+  { imgSrc: yellownailImage, alt: "Slide 2" },
   { imgSrc: yellownailImage, alt: "Slide 3" },
 ];
 
