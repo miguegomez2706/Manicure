@@ -5,20 +5,20 @@ import Footer from "./components/molecules/Footer.jsx";
 import SalonPage from "./components/salonPage/SalonPage.jsx";
 import HomePage from "./components/organisms/HomePage.jsx";
 import Reserva from "./components/turns/Reserva.jsx";
-import ModalTurnos from "./components/turns/ModalTurnos.jsx";
+import Turnos from "./components/turns/Turnos.jsx";
 import Curso from "./components/cursos/Curso.jsx";
 
 function App() {
   return (
     <Router>
-      <div className="font-rale">
+      <div className="font-playfair">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/cursos" element={<Curso />} />
           <Route path="/salon" element={<SalonPage />} />
-          <Route path="/reserva" element={<Reserva />} />
-          <Route path="/modal" element={<ModalTurnos />} />
+
+          <Route path="/Turnos" element={<Turnos />} />
         </Routes>
         <Footer />
       </div>
