@@ -11,13 +11,13 @@ import Curso from "./components/cursos/Curso.jsx";
 function App() {
   return (
     <Router>
-      <div className="font-rale">
+      <div className="font-playfair">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/cursos" element={<Curso />} />
           <Route path="/salon" element={<SalonPage />} />
-          <Route path="/reserva" element={<Reserva />} />
+
           <Route path="/Turnos" element={<Turnos />} />
         </Routes>
         <Footer />
