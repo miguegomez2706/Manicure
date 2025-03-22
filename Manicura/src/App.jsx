@@ -6,16 +6,16 @@ import SalonPage from "./components/salonPage/SalonPage.jsx";
 import HomePage from "./components/organisms/HomePage.jsx";
 import Reserva from "./components/turns/Reserva.jsx";
 import ModalTurnos from "./components/turns/ModalTurnos.jsx";
-import Curso from "./components/cursos/Curso.jsx";
+import ListCurso from "./components/organisms/ListCurso.jsx";
 
 function App() {
   return (
     <Router>
-      <div className="font-rale">
+      <div className="font-playfair">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/cursos" element={<Curso />} />
+          <Route path="/cursos" element={<ListCurso />} />
           <Route path="/salon" element={<SalonPage />} />
           <Route path="/reserva" element={<Reserva />} />
           <Route path="/modal" element={<ModalTurnos />} />

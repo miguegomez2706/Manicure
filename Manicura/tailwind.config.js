@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       rale: ["Raleway"],
+      playfair: ["Playfair Display", "serif"],
     },
     extend: {
       colors: {
@@ -23,4 +24,3 @@ export default {
   },
   plugins: [],
 };
-
