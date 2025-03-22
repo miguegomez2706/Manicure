@@ -2,6 +2,8 @@ import Perfil from "../nosotros/Perfil";
 import AboutUs from "../atoms/AboutUs";
 import OurLocal from "../organisms/OurLocal";
 import { perfiles } from "../../assets/dataStore";
+import ReusableSwiper from "../organisms/ReusableSwiper";
+
 const SalonPage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-100 p-10 2xl:px-44">
@@ -20,6 +22,9 @@ const SalonPage = () => {
         <h1 className="flex text-5xl font-normal items-center justify-center mb-4">
           ¡Descubre Nuestra Sucursal!
         </h1>
+        <div className="h-[70vh] overflow-hidden">
+          <ReusableSwiper />
+        </div>
         <OurLocal />
       </section>
     </div>

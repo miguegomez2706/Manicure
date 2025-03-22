@@ -5,7 +5,7 @@ import Footer from "./components/molecules/Footer.jsx";
 import SalonPage from "./components/salonPage/SalonPage.jsx";
 import HomePage from "./components/organisms/HomePage.jsx";
 import Reserva from "./components/turns/Reserva.jsx";
-import ModalTurnos from "./components/turns/ModalTurnos.jsx";
+import Turnos from "./components/turns/Turnos.jsx";
 import ListCurso from "./components/organisms/ListCurso.jsx";
 
 function App() {
@@ -17,8 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/cursos" element={<ListCurso />} />
           <Route path="/salon" element={<SalonPage />} />
-          <Route path="/reserva" element={<Reserva />} />
-          <Route path="/modal" element={<ModalTurnos />} />
+          <Route path="/Turnos" element={<Turnos />} />
         </Routes>
         <Footer />
       </div>

@@ -58,11 +58,7 @@ const NavBar = () => {
             <a onClick={() => navigate("/salon")} href="#" className="lg:mr-7">
               Sobre nosótros
             </a>
-            <a
-              onClick={() => navigate("/reserva")}
-              href="#"
-              className="lg:mr-7"
-            >
+            <a onClick={() => navigate("/Turnos")} href="#" className="lg:mr-7">
               Servícios
             </a>
           </div>
