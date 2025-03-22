@@ -6,7 +6,7 @@ import SalonPage from "./components/salonPage/SalonPage.jsx";
 import HomePage from "./components/organisms/HomePage.jsx";
 import Reserva from "./components/turns/Reserva.jsx";
 import Turnos from "./components/turns/Turnos.jsx";
-import Curso from "./components/cursos/Curso.jsx";
+import ListCurso from "./components/organisms/ListCurso.jsx";
 
 function App() {
   return (
@@ -15,9 +15,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/cursos" element={<Curso />} />
+          <Route path="/cursos" element={<ListCurso />} />
           <Route path="/salon" element={<SalonPage />} />
-
           <Route path="/Turnos" element={<Turnos />} />
         </Routes>
         <Footer />
