@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Btn from "../atoms/Btn";
 import servicios from "./servicios"; // Importa los servicios
-import ModalReserva from "../atoms/Modal";
+import ModalReserva from "../atoms/ModalReserva";
 
 const Turnos = () => {
   const navigate = useNavigate();
@@ -39,15 +39,16 @@ const Turnos = () => {
             </p>
             <p className="text-sm sm:text-lg text-gray-900 mb-10">
               Precio:
-              <span className="font-bold ml-2">${servicio.precio}</span>
+              <span className="font-numeros font-bold ml-2">
+                ${servicio.precio.toLocaleString("es-ES")}
+              </span>
             </p>
-            <Btn
-              rounded={true}
-              type={"primary"}
-              buttonText={"Reservar Ahora!"}
+            <button
               onClick={() => openModal(servicio)}
-              className="self-start transition-none"
-            />
+              className="w-full px-7 py-3 bg-button text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900 bg-gray-900 hover:underline"
+            >
+              Reservar ahora
+            </button>
           </div>
         ))}
       </div>
