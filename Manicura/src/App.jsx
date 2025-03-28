@@ -7,8 +7,12 @@ import HomePage from "./components/organisms/HomePage.jsx";
 import Reserva from "./components/turns/Reserva.jsx";
 import Turnos from "./components/turns/Turnos.jsx";
 import ListCurso from "./components/organisms/ListCurso.jsx";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Router>
       <div className="font-playfair">

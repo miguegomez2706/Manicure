@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <section className="grid grid-col-1 lg:grid-cols-2 pt-10">
       <div className="flex flex-col pl-6 items-start justify-center order-2">
-        <h1 className="text-6xl font-medium mb-6">Sobre Nostros</h1>
+        <h1 className="text-6xl font-medium mb-6">Sobre Nosotros</h1>
         <p className="text-lg text-gray-700 max-w-2xl">
           En Only Nails, nuestra historia se entrelaza con la belleza y la
           excelencia en el cuidado de uñas. Desde nuestros inicios en Monterrey,

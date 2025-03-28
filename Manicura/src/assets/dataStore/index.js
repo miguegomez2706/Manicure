@@ -26,6 +26,39 @@ const imgs = [
   },
 ];
 
+const contenidoCursos = [
+  {
+    title: "React: Buscador de Canciones - Renderizado condicional de datos",
+    nameTeacher: "Romina Gomez",
+    price: 34000,
+  },
+  {
+    title: "React: Buscador de Canciones - Renderizado condicional de datos",
+    nameTeacher: "Romina Gomez",
+    price: 30000,
+  },
+  {
+    title: "Introducción a la ética empresarial",
+    nameTeacher: "Romina Gomez",
+    price: 21000,
+  },
+  {
+    title: "Curso gratuito de fotografía con smartphone",
+    nameTeacher: "Romina Gomez",
+    price: 14000,
+  },
+  {
+    title: "E-commerce para principiantes",
+    nameTeacher: "Romina Gomez",
+    price: 11000,
+  },
+  {
+    title: "Fotografía para Instagram",
+    nameTeacher: "Romina Gomez",
+    price: 20000,
+  },
+];
+
 const slidesData = [
   { imgSrc: yellownailImage, alt: "Slide 1" },
   { imgSrc: yellownailImage, alt: "Slide 2" },
@@ -64,4 +97,4 @@ const perfiles = [
   { name: "Ceferina Petrona", title: "Pestañista" },
   { name: "Eufemia Hipólito", title: "Piecista" },
 ];
-export { imgs, imgsTotal, slidesData, perfiles };
+export { imgs, imgsTotal, slidesData, perfiles, contenidoCursos };
