@@ -38,13 +38,15 @@ const Btn = ({
   hoverBorderColor = "hover:border-gray-700",
   borderColor = "border-gray-900",
   className = "",
-  to = "/",
+  to = null, // Cambié la ruta por defecto a null
 }) => {
   const navigate = useNavigate(); // Usamos useNavigate para manejar la navegación
 
   const handleClick = () => {
-    // if (onClick) onClick(); // Ejecutamos la función onClick si se pasa alguna
-    navigate(to); // Redirigimos a la ruta proporcionada
+    if (onClick) onClick(); // Ejecutamos la función onClick si se pasa alguna
+    if (to) {
+      navigate(to); // Redirigimos solo si `to` está definido
+    }
   };
 
   return (
