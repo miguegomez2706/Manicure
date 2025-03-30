@@ -46,7 +46,7 @@ const NavBar = () => {
           </svg>
         </div>
 
-        {/* Menú */}
+        {/* Menú agregando algo pra subnir y que el chizzi vea de nuevo o traiga todo mis cambios!!*/}
         <div
           className={`absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none transition-all duration-300 ${
             menuVisible ? "block" : "hidden"
