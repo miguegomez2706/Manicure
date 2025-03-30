@@ -1,13 +1,11 @@
-import { useNavigate } from "react-router-dom";
 import imgLocal from "../../assets/image/comunes/imagenLocal.jpeg";
+import Btn from "../atoms/Btn";
 
 const SalonComponent = () => {
-  const navigate = useNavigate(); // Hook para la navegación
-
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 px-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 px-4 pt-16">
       <div className="order-2 flex flex-col items sm:justify-center sm:items-center">
-        <h2 className="mb-10 text-5xl font-extralight">
+        <h2 className="mb-10 text-4xl md:text-5xl font-extralight">
           Más que un Salón de Uñas:
         </h2>
         <p className="text-lg mb-6 sm:w-1/2">
@@ -16,12 +14,9 @@ const SalonComponent = () => {
           perfeccionado el arte de embellecer tus manos y pies con pasión y
           profesionalismo.
         </p>
-        <button
-          className="px-6 py-2 text-white bg-gray-800 rounded hover:bg-gray-700"
-          onClick={() => navigate("/salon")}
-        >
-          ¡Conócenos!
-        </button>
+        <div className=" w-[60%]">
+          <Btn text="¡Conócenos!" to="salon" />
+        </div>
       </div>
       <div className="relative order-1">
         <div className="overflow-hidden">

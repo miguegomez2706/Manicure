@@ -27,18 +27,18 @@
 
 // export default Btn;
 
-import React from "react";
 import { useNavigate } from "react-router-dom"; // Importamos useNavigate para manejar la navegación
 
 const Btn = ({
   onClick,
   text = "Botón",
-  bgColor = "bg-gray-900",
+  bgColor = "bg-gray-800",
   textColor = "text-white",
   hoverBorderColor = "hover:border-gray-700",
   borderColor = "border-gray-900",
   className = "",
-  to = null, // Cambié la ruta por defecto a null
+  to = "",
+  hoverUnderline = false,
 }) => {
   const navigate = useNavigate(); // Usamos useNavigate para manejar la navegación
 
@@ -52,7 +52,9 @@ const Btn = ({
   return (
     <button
       onClick={handleClick} // Usamos la función handleClick que maneja la acción y navegación
-      className={`w-full px-7 py-3 ${bgColor} ${textColor} cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid ${borderColor}  ${hoverBorderColor} hover:underline ${className}`}
+      className={`w-full px-7 py-3 ${bgColor} ${textColor} cursor-pointer text-base hover:bg-gray-600 mt-8 sm:mt-4 border-2 border-solid ${borderColor} ${hoverBorderColor} ${
+        hoverUnderline ? "hover:underline" : ""
+      } ${className}`}
     >
       {text} {/* Texto dinámico */}
     </button>
