@@ -1,8 +1,6 @@
 import { useState } from "react";
 import icon from "../../../assets/image/icono/icono.ico";
 import { useNavigate } from "react-router-dom";
-// import HomePage from "../../organisms/HomePage";
-// import Modal from "../../atoms/Modal";
 
 const NavBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -10,30 +8,35 @@ const NavBar = () => {
 
   const mostrarMenu = () => {
     setMenuVisible(!menuVisible);
-    console.log("Esta Funcionando " + menuVisible);
   };
 
   return (
-    <nav className="sticky top-0 bg-gray-200 w-[100%] z-50">
-      <div className="md:px-20 lg:px-44 flex items-center md:-ml-6">
-        <div className="flex flex-grow items-center ">
-          <img src={icon} alt="" className="w-20 h-20" />
+    <nav className="sticky top-0 bg-white shadow-md w-full z-50">
+      <div className="flex items-center justify-between px-6 md:px-10 lg:px-32 py-3">
+        {/* Logo y Nombre */}
+        <div className="flex items-center gap-3 cursor-pointer">
+          <img
+            src={icon}
+            alt="Logo"
+            className="w-16 h-16"
+            onClick={() => navigate("/")}
+          />
           <a
             onClick={() => navigate("/")}
-            href=""
-            className="font-style: italic"
+            className="text-lg font-semibold italic "
           >
             Nails Art
           </a>
         </div>
+
+        {/* Icono Menú (Móvil) */}
         <div className="lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="size-5 lg:hidden m-4 cursor-pointer"
+            className="w-7 h-7 cursor-pointer hover:text-gray-700"
             onClick={mostrarMenu}
-            // onClick={<Modal />} // esto modificque que no anda
           >
             <path
               fillRule="evenodd"
@@ -42,24 +45,37 @@ const NavBar = () => {
             />
           </svg>
         </div>
+
+        {/* Menú agregando algo pra subnir y que el chizzi vea de nuevo o traiga todo mis cambios!!*/}
         <div
-          id="menu"
-          className={`${
-            menuVisible ? "block bg-white w-full " : "hidden"
-          } left-0 flex-grow justify-between lg:w-auto lg:block lg:relative lg:top-0 top-20 py-5 px-11`}
+          className={`absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none transition-all duration-300 ${
+            menuVisible ? "block" : "hidden"
+          } lg:block`}
         >
-          <div className="flex flex-col lg:flex-row">
-            <a onClick={() => navigate("/")} href="#" className="lg:mr-7">
-              Início{" "}
+          <div className="flex flex-col lg:flex-row lg:items-center gap-4 py-4 lg:py-0 px-6 lg:px-0">
+            <a
+              onClick={() => navigate("/")}
+              className="nav-link cursor-pointer"
+            >
+              Inicio
             </a>
-            <a onClick={() => navigate("/cursos")} href="#" className="lg:mr-7">
+            <a
+              onClick={() => navigate("/cursos")}
+              className="nav-link cursor-pointer"
+            >
               Cursos
             </a>
-            <a onClick={() => navigate("/salon")} href="#" className="lg:mr-7">
-              Sobre nosótros
+            <a
+              onClick={() => navigate("/salon")}
+              className="nav-link cursor-pointer"
+            >
+              Sobre Nosotros
             </a>
-            <a onClick={() => navigate("/Turnos")} href="#" className="lg:mr-7">
-              Servícios
+            <a
+              onClick={() => navigate("/Turnos")}
+              className="nav-link cursor-pointer"
+            >
+              Servicios
             </a>
           </div>
         </div>
