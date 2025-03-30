@@ -19,6 +19,7 @@ function App() {
           <Route path="/salon" element={<SalonPage />} />
 
           <Route path="/Turnos" element={<Turnos />} />
+          <Route path="/Reserva" element={<Reserva />} />
         </Routes>
         <Footer />
       </div>

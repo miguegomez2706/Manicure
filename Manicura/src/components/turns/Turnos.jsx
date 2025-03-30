@@ -10,13 +10,26 @@ const Turnos = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const openModal = (servicio) => {
-    setSelectedService(servicio);
-    setModalOpen(true);
+    console.log("Servicio seleccionado:", servicio); // Muestra solo una vez el servicio seleccionado
+    setSelectedService(servicio); // Establece el servicio seleccionado
+    setModalOpen(true); // Abre el modal
   };
 
   const closeModal = () => {
-    setModalOpen(false);
-    setSelectedService(null);
+    setModalOpen(false); // Cierra el modal
+    setSelectedService(null); // Limpia el servicio seleccionado
+  };
+
+  const addMoreService = () => {
+    setModalOpen(false); // Cierra el modal actual
+    setSelectedService(null); // Limpia el servicio seleccionado
+    // Lógica para permitir la selección de otro servicio
+    // Esta función puede abrir de nuevo la lista de servicios
+  };
+
+  const confirmReserva = () => {
+    // Lógica para confirmar la reserva
+    navigate("/reserva"); // Redirige a la página de reserva
   };
 
   return (
@@ -43,12 +56,11 @@ const Turnos = () => {
                 ${servicio.precio.toLocaleString("es-ES")}
               </span>
             </p>
-            <button
-              onClick={() => openModal(servicio)}
-              className="w-full px-7 py-3 bg-button text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900 bg-gray-900 hover:underline"
-            >
-              Reservar ahora
-            </button>
+            <Btn
+              text="Reservar ahora" // Texto del botón
+              onClick={() => openModal(servicio)} // Acción para abrir el modal con el servicio seleccionado
+              className="w-full px-7 py-3 bg-button text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900"
+            />
           </div>
         ))}
       </div>
@@ -56,9 +68,10 @@ const Turnos = () => {
       {/* 🟢 MODAL */}
       <ModalReserva
         isOpen={modalOpen}
-        servicio={selectedService}
+        servicio={selectedService} // Aquí pasamos el servicio seleccionado
         onClose={closeModal}
-        onConfirm={() => navigate("/reserva")}
+        onConfirm={confirmReserva} // Confirmar la reserva
+        onAddMore={addMoreService} // Agregar más servicios
       />
     </div>
   );
