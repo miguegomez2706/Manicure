@@ -2,6 +2,10 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      rale: ["Raleway"],
+      playfair: ["Playfair Display", "serif"],
+    },
     extend: {
       fontFamily: {
         rale: ["Raleway"],

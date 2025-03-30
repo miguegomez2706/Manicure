@@ -43,8 +43,10 @@ const Btn = ({
   const navigate = useNavigate(); // Usamos useNavigate para manejar la navegación
 
   const handleClick = () => {
-    // if (onClick) onClick(); // Ejecutamos la función onClick si se pasa alguna
-    navigate(to); // Redirigimos a la ruta proporcionada
+    if (onClick) onClick(); // Ejecutamos la función onClick si se pasa alguna
+    if (to) {
+      navigate(to); // Redirigimos solo si `to` está definido
+    }
   };
 
   return (
