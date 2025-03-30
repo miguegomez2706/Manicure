@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Btn from "../atoms/Btn";
-import servicios from "./servicios"; // Importa los servicios
+import { servicios } from "../../assets/dataStore"; // Importa los servicios
 import ModalReserva from "../atoms/ModalReserva";
 
 const Turnos = () => {
