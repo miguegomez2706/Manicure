@@ -7,7 +7,9 @@ import { useEffect, useState } from "react";
 
 const SalonPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 1);
   }, []);

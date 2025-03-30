@@ -14,6 +14,10 @@ const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     setTimeout(() => setIsVisible(true), 1);
   }, []);
   return (
