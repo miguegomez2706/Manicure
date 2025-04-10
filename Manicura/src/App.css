@@ -75,3 +75,73 @@
     --smaller-font-size: -75rem;
   }
 }
+
+/* Personalización de react-calendar */
+.custom-calendar {
+  font-family: "Poppins", sans-serif; /* Fuente moderna */
+  border: none !important;
+  width: 100% !important;
+}
+
+/* Encabezado (Mes y Año) */
+.custom-calendar .react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+/* Botones de navegación (< >) */
+.custom-calendar .react-calendar__navigation button {
+  color: black;
+  background: none;
+  font-size: 1.3rem;
+  transition: all 0.3s;
+}
+
+.custom-calendar .react-calendar__navigation button:hover {
+  color: #a0804f; /* Color dorado */
+}
+
+/* Días de la semana */
+.custom-calendar .react-calendar__month-view__weekdays {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: black;
+}
+
+/* Días del mes */
+.custom-calendar .react-calendar__tile {
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Día seleccionado */
+.custom-calendar .react-calendar__tile--active {
+  background: #a0804f !important; /* Color dorado */
+  color: white !important;
+  font-weight: bold;
+}
+
+/* Día cuando se pasa el mouse */
+.custom-calendar .react-calendar__tile:hover {
+  background: rgba(160, 128, 79, 0.3); /* Dorado suave */
+  color: black;
+}
+
+/* Puntos debajo de cada día (si hay eventos) */
+.custom-calendar .react-calendar__tile abbr::after {
+  content: "•";
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 2px;
+  color: black;
+}
+
+/* Quitar el subrayado de los días de la semana */
+.custom-calendar .react-calendar__month-view__weekdays abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}

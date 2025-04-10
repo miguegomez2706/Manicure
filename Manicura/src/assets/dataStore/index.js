@@ -112,4 +112,4 @@ const servicios = [
   },
 ];
 
-export { imgs, imgsTotal, slidesData, perfiles, servicios };
+export { imgs, imgsTotal, slidesData, perfiles, servicios, contenidoCursos };
