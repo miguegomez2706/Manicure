@@ -8,6 +8,7 @@ import Reserva from "./components/turns/Reserva.jsx";
 import Turnos from "./components/turns/Turnos.jsx";
 import ListCurso from "./components/organisms/ListCurso.jsx";
 import { useEffect } from "react";
+import InfoCurso from "./components/organisms/InfoCurso.jsx";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/salon" element={<SalonPage />} />
           <Route path="/Turnos" element={<Turnos />} />
           <Route path="/Reserva" element={<Reserva />} />
+          <Route path="/InfoCurso" element={<InfoCurso />} />
         </Routes>
         <Footer />
       </div>
