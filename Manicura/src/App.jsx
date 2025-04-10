@@ -4,9 +4,10 @@ import Navbar from "./components/molecules/navbar/navbar.jsx";
 import Footer from "./components/molecules/Footer.jsx";
 import SalonPage from "./components/salonPage/SalonPage.jsx";
 import HomePage from "./components/organisms/HomePage.jsx";
-import Reserva from "./components/turns/Reserva.jsx";
-import Turnos from "./components/turns/Turnos.jsx";
+import Reserva from "./components/services/Reserva.jsx";
+import Turnos from "./components/services/Turnos.jsx";
 import ListCurso from "./components/organisms/ListCurso.jsx";
+import Confirm from "./components/services/Confirm.jsx";
 import { useEffect } from "react";
 import InfoCurso from "./components/organisms/InfoCurso.jsx";
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Turnos" element={<Turnos />} />
           <Route path="/Reserva" element={<Reserva />} />
           <Route path="/InfoCurso" element={<InfoCurso />} />
+          <Route path="/Confirm" element={<Confirm />} />
         </Routes>
         <Footer />
       </div>

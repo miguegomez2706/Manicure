@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Btn from "../atoms/Btn";
-import servicios from "./servicios"; // Importa los servicios
+import { servicios } from "../../assets/dataStore"; // Importa los servicios
 import ModalReserva from "../atoms/ModalReserva";
 
 const Turnos = () => {
@@ -33,7 +33,7 @@ const Turnos = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-6">
+    <div className="min-h-screen flex flex-col items-center p-6 animate-fade-in transition-opacity duration-700 ease-in-out">
       <h1 className="font-playfair text-4xl md:text-6xl py-8 mb-6 text-gray-800 text-center w-full">
         Servicios Disponibles
       </h1>

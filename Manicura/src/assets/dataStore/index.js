@@ -5,6 +5,7 @@ import img3 from "../image/semipermanente/semi3.jpeg";
 import img4 from "../image/semipermanente/semi4.jpeg";
 import img7 from "../image/semipermanente/semi7.jpeg";
 import yellownailImage from "../../assets/image/swiper/swiper.jpg";
+
 const imgs = [
   {
     image: img1,
@@ -97,4 +98,18 @@ const perfiles = [
   { name: "Ceferina Petrona", title: "Pestañista" },
   { name: "Eufemia Hipólito", title: "Piecista" },
 ];
-export { imgs, imgsTotal, slidesData, perfiles, contenidoCursos };
+
+// Arreglo con los datos de los servicios
+const servicios = [
+  { nombre: "Corte de Cabello", descripcion: "Corte básico.", precio: 15000 },
+  { nombre: "Manicura", descripcion: "Manicura básica.", precio: 15000 },
+  { nombre: "Pedicura", descripcion: "Pedicura clásica.", precio: 20000 },
+  { nombre: "Masaje Facial", descripcion: "Masaje relajante.", precio: 10000 },
+  {
+    nombre: "Tinte de Cabello",
+    descripcion: "Cambio de color.",
+    precio: 40000,
+  },
+];
+
+export { imgs, imgsTotal, slidesData, perfiles, servicios, contenidoCursos };
