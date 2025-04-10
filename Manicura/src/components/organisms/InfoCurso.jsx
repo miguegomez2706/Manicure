@@ -86,7 +86,7 @@ const InfoCurso = () => {
             </div>
           </div>
           <div className="ml-5 col-span-1">
-            <div className="text-black">
+            <div className="text-black flex flex-col gap-10">
               <BgWhiteCard customStyle="">
                 {/* componente inicio de cursada */}
                 <div className="flex items-center m-3 justify-between">
@@ -109,28 +109,30 @@ const InfoCurso = () => {
                   <h1>Lunes de 19:00 a 21:30hs</h1>
                 </div>
               </BgWhiteCard>
-              <BgWhiteCard customStyle="mt-28">
-                <div className="flex flex-col justify-between p-5 gap-5 ">
-                  <p>Valor</p>
-                  <p>65.3900 $</p>
-                  <div className="border rounded-sm border-green-500 text-green-500 w-fit px-1">
-                    <p>Efectivo</p>
+              <div>
+                <BgWhiteCard customStyle="mt-28">
+                  <div className="flex flex-col justify-between p-5 gap-5 ">
+                    <p>Valor</p>
+                    <p>65.3900 $</p>
+                    <div className="border rounded-sm border-green-500 text-green-500 w-fit px-1">
+                      <p>Efectivo</p>
+                    </div>
                   </div>
-                </div>
-              </BgWhiteCard>
-              <BgWhiteCard customStyle="p-5">
-                <div className="px-5">
-                  <Btn
-                    textColor="text-black"
-                    bgColor="bg-white hover:text-white"
-                    text="Inscribirse Ahora"
-                  />
-                  <Btn
-                    text="Realizar una Consulta"
-                    bgColor="trashover:bg-buttonHover hover:border-gray-900 bg-gray-900 hover:bg-transparent hover:text-black"
-                  />
-                </div>
-              </BgWhiteCard>
+                </BgWhiteCard>
+                <BgWhiteCard customStyle="p-5">
+                  <div className="px-5">
+                    <Btn
+                      textColor="text-black"
+                      bgColor="bg-white hover:text-white"
+                      text="Inscribirse Ahora"
+                    />
+                    <Btn
+                      text="Realizar una Consulta"
+                      bgColor="trashover:bg-buttonHover hover:border-gray-900 bg-gray-900 hover:bg-transparent hover:text-black"
+                    />
+                  </div>
+                </BgWhiteCard>
+              </div>
             </div>
           </div>
         </div>
