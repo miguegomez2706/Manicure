@@ -9,6 +9,8 @@ import Turnos from "./components/services/Turnos.jsx";
 import ListCurso from "./components/organisms/ListCurso.jsx";
 import Confirm from "./components/services/Confirm.jsx";
 import { useEffect } from "react";
+import InfoCurso from "./components/organisms/InfoCurso.jsx";
+import ModalConsulta from "./components/molecules/ModalConsulta.jsx";
 
 function App() {
   useEffect(() => {
@@ -24,7 +26,9 @@ function App() {
           <Route path="/salon" element={<SalonPage />} />
           <Route path="/Turnos" element={<Turnos />} />
           <Route path="/Reserva" element={<Reserva />} />
+          <Route path="/InfoCurso" element={<InfoCurso />} />
           <Route path="/Confirm" element={<Confirm />} />
+          <Route path="/Modal" element={<ModalConsulta />} />
         </Routes>
         <Footer />
       </div>

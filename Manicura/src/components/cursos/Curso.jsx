@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import img from "../../assets/image/semipermanente/semi6.jpeg";
 import Btn from "../atoms/Btn";
 import { FaPlayCircle } from "react-icons/fa";
 
 const Curso = (props) => {
+  const navigate = useNavigate();
   return (
     <div className="w-80 rounded-md border overflow-hidden ">
       {/* Contenedor de la imagen */}
@@ -26,7 +28,7 @@ const Curso = (props) => {
           Precio: <span className="font-numeros font-bold">${props.price}</span>
         </div>
         <div className="flex justify-center mb-5">
-          <Btn text="Inscribete ahora!" />
+          <Btn text="Inscribete ahora!" to="/InfoCurso" />
         </div>
       </div>
     </div>
