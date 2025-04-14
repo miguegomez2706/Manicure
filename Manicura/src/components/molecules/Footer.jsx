@@ -2,8 +2,8 @@ import icon from "../../assets/image/icono/icono.ico";
 const Footer = () => {
   return (
     <div className=" body-font font-style: italic h-10">
-      <div className="container text-center px-5 pt-8 mx-auto flex items-center flex-col lg:flex-row lg:justify-between">
-        <article className="container px-5 mx-auto flex items-center flex-col lg:flex-row">
+      <div className="container text-center px-5 pt-8 flex items-center flex-col lg:flex-row lg:justify-between">
+        <article className="container px-5 flex items-center flex-col lg:flex-row mx-44">
           <img src={icon} alt="" className="w-20 h-20" />
           <a className="flex title-font font-medium items-center md:justify-start justify-center">
             <svg
