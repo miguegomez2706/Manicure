@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const NuevoModal = ({ children }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
@@ -6,6 +8,10 @@ const NuevoModal = ({ children }) => {
       </div>
     </div>
   );
+};
+
+NuevoModal.propTypes = {
+  children: PropTypes.node,
 };
 
 export default NuevoModal;

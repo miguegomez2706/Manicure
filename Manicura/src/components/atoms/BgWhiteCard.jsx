@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 const BgWhiteCard = ({ children, customStyle }) => {
   return (
     <div
@@ -8,4 +9,8 @@ const BgWhiteCard = ({ children, customStyle }) => {
   );
 };
 
+BgWhiteCard.propTypes = {
+  children: PropTypes.node,
+  customStyle: PropTypes.string,
+};
 export default BgWhiteCard;
