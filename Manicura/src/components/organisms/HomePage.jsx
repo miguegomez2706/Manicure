@@ -1,5 +1,5 @@
 import SalonComponent from "../atoms/SalonComponent.jsx";
-import HomeSwiper from "../homeSwiper/HomeSwiper.jsx";
+import HomeSwiper from "../molecules/homeSwiper/HomeSwiper";
 import ListCard from "../molecules/ListCard.jsx";
 import Commercial from "../molecules/commercial.jsx";
 import ListCardGeneral from "../molecules/ListCardGeneral.jsx";

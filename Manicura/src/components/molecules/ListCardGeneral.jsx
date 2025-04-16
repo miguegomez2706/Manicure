@@ -29,7 +29,7 @@
 import { useState } from "react";
 import { imgsTotal } from "../../assets/dataStore";
 import RenderImg from "../atoms/RenderImg";
-import Modal from "../atoms/ModalReserva";
+import ModalReserva from "../services/ModalReserva";
 
 const ListCardGeneral = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
