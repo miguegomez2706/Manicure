@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Card = ({ children, imgSrc, hasRoundedBorders, modal }) => {
+const Card = ({ children, imgSrc, hasRoundedBorders, modal, show = false }) => {
   return (
     <div
       className={`m-4 relative overflow-hidden shadow-lg group ${
@@ -10,7 +10,7 @@ const Card = ({ children, imgSrc, hasRoundedBorders, modal }) => {
       <img
         src={imgSrc}
         alt=""
-        className="brightness-90 duration-200 h-56 md:h-80 lg:h-full w-full object-cover transition-transform group-hover:scale-105"
+        className="brightness-90 duration-200 h-56 md:h-80 lg:h-full  w-full object-cover transition-transform group-hover:scale-105"
       />
       {modal && (
         <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
@@ -30,8 +30,9 @@ const Card = ({ children, imgSrc, hasRoundedBorders, modal }) => {
           </svg>
         </div>
       )}
-      {children && (
-        <div className="md:absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent">
+      {/*aca esta el problema el listCardGeneral que para cel se ve mal*/}
+      {children && show && (
+        <div className="md:absolute inset-0 flex items-end object-cover bg-gradient-to-t from-black/60 to-transparent">
           <div className="p-4 text-white">{children}</div>
         </div>
       )}

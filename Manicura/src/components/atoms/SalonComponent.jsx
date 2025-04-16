@@ -3,9 +3,9 @@ import Btn from "../atoms/Btn";
 
 const SalonComponent = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 px-4 pt-16">
-      <div className="order-2 flex flex-col items sm:justify-center sm:items-center">
-        <h2 className="mb-10 text-4xl md:text-5xl font-extralight">
+    <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:pt-16">
+      <div className="order-2 flex flex-col items justify-center items-center">
+        <h2 className="mb-10 text-4xl md:text-5xl font-extralight pl-5 lg:pl-0">
           Más que un Salón de Uñas:
         </h2>
         <p className="text-lg mb-6 sm:w-1/2">

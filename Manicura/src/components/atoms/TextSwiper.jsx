@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Btn from "./Btn";
 
 const TextSwiper = () => {
   const navigate = useNavigate();
@@ -15,12 +16,11 @@ const TextSwiper = () => {
         versión?
       </h1>
       <div className="mt-5 sm:mt-8 flex justify-center w-full">
-        <button
+        <Btn
+          text="Reserva una cita"
           onClick={() => navigate("/turnos")}
-          className="px-7 py-3 bg-button text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900 hover:bg-transparent"
-        >
-          Reserva una cita
-        </button>
+          className="px-7 w-3/4 py-3 bg-button text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900 hover:bg-transparent"
+        />
       </div>
     </div>
   );
