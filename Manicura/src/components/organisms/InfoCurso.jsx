@@ -7,21 +7,21 @@ import { GoDeviceCameraVideo } from "react-icons/go";
 import BgWhiteCard from "../atoms/BgWhiteCard";
 import Btn from "../atoms/Btn";
 
-const InfoCurso = () => {
+const InfoCurso = ({
+  titulo = "Titulo",
+  textPresentation = "texto de Presentacio",
+}) => {
   return (
     <div className="min-h-screen">
       <div className="bg-gray-500 h-72 text-white flex items-center justify-center px-5">
-        <h1 className="text-3xl text-center max-w-4xl">
-          Curso de Elaboración de preparados magistrales en farmacias -
-          Conocimientos básicos
-        </h1>
+        <h1 className="text-3xl text-center max-w-4xl">{titulo}</h1>
       </div>
       <div className="mx-5 md:mx-44 grid grid-cols-1 lg:grid-cols-4 text-black mt-10 lg:gap-10">
         <div className="md:col-span-3 lg:pr-14 order-2">
           <div className="my-10">
             <h3 className="text-3xl mb-10">Presentación</h3>
             <p>
-              Los preparados en las farmacias son aquellos elaborados en los
+              {/* Los preparados en las farmacias son aquellos elaborados en los
               laboratorios de las farmacias comunitarias y hospitalarias. Dentro
               de estos preparados, contamos con diferentes opciones: magistrales
               y oficinales, los cuales comparten características en común pero
@@ -40,6 +40,8 @@ const InfoCurso = () => {
               estos preparados, dado que las farmacias de todo el país pueden
               tener este tipo de laboratorios y los auxiliares pueden ayudar en
               algunas tareas al farmacéutico.
+               */}
+              {textPresentation}
             </p>
           </div>
           <div>

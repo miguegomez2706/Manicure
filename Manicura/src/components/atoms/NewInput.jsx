@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const NewInput = ({
   type = "text",
   label,
@@ -21,4 +23,11 @@ const NewInput = ({
   );
 };
 
+NewInput.propTypes = {
+  type: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  placeholder: PropTypes.string,
+};
 export default NewInput;

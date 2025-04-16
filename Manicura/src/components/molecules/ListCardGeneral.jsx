@@ -56,9 +56,9 @@ const ListCardGeneral = () => {
         </h4>
       </div>
       <div className="flex-row justify-between w-full items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {imgsTotal.map((img) => (
+        {imgsTotal.map((img, index) => (
           <RenderImg
-            key={img.image}
+            key={index}
             imagen={img}
             texto={"Algo"}
             rounded={false}
