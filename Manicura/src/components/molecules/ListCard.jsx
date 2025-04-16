@@ -13,9 +13,9 @@ const ListCard = () => {
       </div>
       <div className="flex flex-col items-center">
         <div className="justify-between items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:w-3/4">
-          {imgs.map((img) => (
+          {imgs.map((img, index) => (
             <RenderImg
-              key={img.key}
+              key={index}
               imagen={img}
               texto={"Algo"}
               rounded={true}

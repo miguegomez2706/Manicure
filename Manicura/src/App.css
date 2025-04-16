@@ -61,6 +61,11 @@
   /* Z-index */
   --z-tooltip: 10;
   --z-fixed: 100;
+
+  .no-scroll {
+    overflow: hidden !important;
+    height: 100%;
+  }
 }
 
 /* Responsive typography */

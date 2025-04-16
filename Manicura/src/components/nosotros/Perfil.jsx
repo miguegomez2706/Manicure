@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import img1 from "../../assets/image/semipermanente/semi3.jpeg";
 
 const Perfil = ({ title, name }) => {
@@ -20,6 +21,11 @@ const Perfil = ({ title, name }) => {
       </div>
     </div>
   );
+};
+
+Perfil.propTypes = {
+  title: PropTypes.string,
+  name: PropTypes.string,
 };
 
 export default Perfil;

@@ -35,7 +35,7 @@ const SalonPage = () => {
         <h1 className="flex text-5xl font-normal items-center justify-center mb-4">
           ¡Descubre Nuestra Sucursal!
         </h1>
-        <div className="h-[70vh] overflow-hidden">
+        <div className="">
           <ReusableSwiper />
         </div>
         <OurLocal />

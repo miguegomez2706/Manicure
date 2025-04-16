@@ -54,25 +54,37 @@ const NavBar = () => {
         >
           <div className="flex flex-col lg:flex-row lg:items-center gap-4 py-4 lg:py-0 px-6 lg:px-0">
             <a
-              onClick={() => navigate("/")}
+              onClick={() => {
+                navigate("/");
+                setMenuVisible(false);
+              }}
               className="nav-link cursor-pointer"
             >
               Inicio
             </a>
             <a
-              onClick={() => navigate("/cursos")}
+              onClick={() => {
+                navigate("/cursos");
+                setMenuVisible(false);
+              }}
               className="nav-link cursor-pointer"
             >
               Cursos
             </a>
             <a
-              onClick={() => navigate("/salon")}
+              onClick={() => {
+                navigate("/salon");
+                setMenuVisible(false);
+              }}
               className="nav-link cursor-pointer"
             >
               Sobre Nosotros
             </a>
             <a
-              onClick={() => navigate("/Turnos")}
+              onClick={() => {
+                navigate("/Turnos");
+                setMenuVisible(false);
+              }}
               className="nav-link cursor-pointer"
             >
               Servicios
