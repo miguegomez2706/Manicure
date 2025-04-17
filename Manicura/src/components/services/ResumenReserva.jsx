@@ -17,12 +17,20 @@ const ResumenReserva = ({
         <h2 className="text-2xl text-title mb-4 text-left">
           Datos de la reserva
         </h2>
-        <button
+        {/* <button
           className="text-sm text-blue-500 hover:underline ml-auto"
           onClick={onEditar}
         >
           Editar
-        </button>
+        </button> */}
+        {/* <Btn
+          text="Editar"
+          textColor="text-blue-500"
+          className="text-sm hover:underline mb-5 w-5 mr-6"
+          trasparent={true}
+          borderColor="none"
+          disableHover={true}
+        ></Btn>*/}
       </div>
 
       {servicioSeleccionado ? (

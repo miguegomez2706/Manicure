@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Btn from "../atoms/Btn";
 import { servicios } from "../../assets/dataStore"; // Importa los servicios
-import ModalReserva from "../atoms/ModalReserva";
+import ModalReserva from "./ModalReserva";
 
 const Turnos = () => {
   const navigate = useNavigate();
@@ -10,7 +10,6 @@ const Turnos = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const openModal = (servicio) => {
-    console.log("Servicio seleccionado:", servicio); // Muestra solo una vez el servicio seleccionado
     setSelectedService(servicio); // Establece el servicio seleccionado
     setModalOpen(true); // Abre el modal
   };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Btn from "./Btn";
+import Btn from "../atoms/Btn";
 import { servicios } from "../../assets/dataStore";
 
 const ModalReserva = ({ isOpen, servicio, onClose, onConfirm }) => {

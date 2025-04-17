@@ -1,6 +1,7 @@
 import Curso from "../cursos/Curso";
 import { contenidoCursos } from "../../assets/dataStore";
 import { useEffect, useState } from "react";
+import FormularioReserva from "../services/FormularioReserva";
 
 const ListCurso = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,6 +13,15 @@ const ListCurso = () => {
   useEffect(() => {
     setTimeout(() => setIsVisible(true), 1);
   }, []);
+
+  const handleFormularioSubmit = (formData) => {
+    console.log("Datos enviados desde Confirm:", formData);
+  };
+
+  const fields = [
+    { name: "Direccion", label: "Direccion", required: true },
+    { name: "apellido", label: "Apellido", required: true },
+  ];
   return (
     <div
       className={` 2xl:px-44 animate-fade-in transition-opacity duration-700 ease-in-out ${
@@ -29,6 +39,7 @@ const ListCurso = () => {
             />
           </div>
         ))}
+        <FormularioReserva onSubmit={handleFormularioSubmit} fields={fields} />
       </div>
     </div>
   );
