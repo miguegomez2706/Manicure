@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import { imgsTotal } from "../../assets/dataStore";
 import RenderImg from "../atoms/RenderImg";
-<<<<<<< HEAD
 import ModalCard from "../atoms/ModalCard";
-=======
-import ModalReserva from "../services/ModalReserva";
->>>>>>> dev-brian
 
 const ListCardGeneral = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

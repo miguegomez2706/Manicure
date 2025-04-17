@@ -21,7 +21,6 @@ const TextSwiper = () => {
           onClick={() => navigate("/turnos")}
           className="px-7 py-3  text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900 bg-gray-900 hover:bg-transparent"
         />
-        Reserva una cita
       </div>
     </div>
   );
