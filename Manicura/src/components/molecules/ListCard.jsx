@@ -20,6 +20,7 @@ const ListCard = () => {
               texto={"Algo"}
               rounded={true}
               modal={false}
+              show={true}
             />
           ))}
         </div>
