@@ -42,6 +42,8 @@ const ListCardGeneral = () => {
             texto={"Algo"}
             rounded={false}
             onClick={() => openModal(img.image)}
+            modal={true}
+            show={true}
           />
         ))}
       </div>
