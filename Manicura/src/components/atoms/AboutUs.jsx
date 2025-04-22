@@ -23,6 +23,7 @@ const AboutUs = () => {
         />
       </div>
     </section>
+    //asdfasdfasdkfujhasdiufyhaiosudfyha
   );
 };
 
