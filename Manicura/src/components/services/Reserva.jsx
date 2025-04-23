@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import ModalReserva from "../atoms/ModalReserva";
+import ModalReserva from "./ModalReserva";
 import ResumenReserva from "./ResumenReserva";
 import Disponibilidad from "./Disponibilidad";
 
