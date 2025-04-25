@@ -1,4 +1,4 @@
-import ReusableSwiper from "../organisms/ReusableSwiper";
+import ReusableSwiper from "../../organisms/ReusableSwiper";
 import "swiper/css";
 import TextSwiper from "../../atoms/TextSwiper";
 
