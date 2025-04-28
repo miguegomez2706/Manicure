@@ -34,7 +34,7 @@ const ListCardGeneral = () => {
         </h4>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-8 md:px-20 lg:px-44">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-8 md:px-20 lg:px-44 w-full">
         {imgsTotal.map((img, index) => (
           <RenderImg
             key={index}

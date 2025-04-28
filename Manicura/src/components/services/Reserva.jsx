@@ -3,7 +3,7 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { useNavigate } from "react-router-dom";
 import Btn from "../atoms/Btn";
-import ModalReserva from "../atoms/ModalReserva";
+import ModalReserva from "./ModalReserva";
 import ResumenReserva from "./ResumenReserva";
 import Disponibilidad from "./Disponibilidad";
 import { servicios } from "../../assets/dataStore";

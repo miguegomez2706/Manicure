@@ -1,71 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import ResumenReserva from "./ResumenReserva";
+import FormularioReserva from "./FormularioReserva";
 
 const Confirm = () => {
   const location = useLocation();
-
   const { servicioSeleccionado, date, disponible } = location.state || {};
 
   const handleEditar = () => {
-    console.log("Editar reserva");
     // Podrías usar navigate para volver a la página anterior
   };
 
-  const [formData, setFormData] = useState({
-    nombre: "",
-    apellido: "",
-    email: "",
-    telefono: "",
-    mensaje: "",
-  });
-
-  const [errors, setErrors] = useState({});
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  const handleFormularioSubmit = (formData) => {
+    console.log("Datos enviados desde Confirm:", formData);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const camposRequeridos = ["nombre", "apellido", "email", "telefono"];
-    const mensajes = {
-      nombre: "El nombre es requerido",
-      apellido: "El apellido es requerido",
-      email: "El email es requerido",
-      telefono: "El teléfono es requerido",
-    };
-
-    const newErrors = {};
-
-    camposRequeridos.forEach((campo) => {
-      if (!formData[campo].trim()) {
-        newErrors[campo] = mensajes[campo];
-      }
-    });
-
-    if (formData.email.trim() && !/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "El email no es válido";
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-
-    console.log("Datos enviados:", formData);
-    alert("Formulario enviado con éxito");
-
-    setFormData({
-      nombre: "",
-      apellido: "",
-      email: "",
-      telefono: "",
-      mensaje: "",
-    });
-    setErrors({});
-  };
+  // Definimos los campos que queremos mostrar en el formulario
+  const fields = [
+    { name: "nombre", label: "Nombre", required: true },
+    { name: "apellido", label: "Apellido", required: true },
+    { name: "email", label: "Email", type: "email", required: true },
+    { name: "telefono", label: "Teléfono", required: true },
+    { name: "mensaje", label: "Mensaje", type: "textarea", required: false },
+    // Aquí podrías agregar más campos según sea necesario
+  ];
 
   return (
     <div className="flex flex-col lg:flex-row max-w-6xl mx-auto mt-10 gap-8 px-4">
@@ -85,47 +43,10 @@ const Confirm = () => {
             </a>
           </h4>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {["nombre", "apellido", "email", "telefono"].map((campo) => (
-                <div key={campo}>
-                  <label className="block text-gray-700 capitalize">
-                    {campo}
-                  </label>
-                  <input
-                    type={campo === "email" ? "email" : "text"}
-                    name={campo}
-                    value={formData[campo]}
-                    onChange={handleChange}
-                    className="w-full p-2 border rounded"
-                  />
-                  {errors[campo] && (
-                    <p className="text-red-500 text-sm">{errors[campo]}</p>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <div>
-              <label className="block text-gray-700">Mensaje</label>
-              <textarea
-                name="mensaje"
-                value={formData.mensaje}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-              ></textarea>
-              {errors.mensaje && (
-                <p className="text-red-500 text-sm">{errors.mensaje}</p>
-              )}
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-            >
-              Enviar
-            </button>
-          </form>
+          <FormularioReserva
+            onSubmit={handleFormularioSubmit}
+            fields={fields} // Pasamos los campos dinámicos
+          />
         </div>
       </div>
 
