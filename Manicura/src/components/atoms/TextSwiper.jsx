@@ -18,8 +18,11 @@ const TextSwiper = () => {
       <div className="mt-5 sm:mt-8 flex justify-center w-full">
         <Btn
           text="Reserva una cita"
+          bgColor="bg-button"
+          textColor="text-black"
+          textHoverColor="text-white"
           onClick={() => navigate("/turnos")}
-          className="px-7 w-3/4 py-3 bg-button text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900 hover:bg-transparent"
+          className="px-7 w-3/4 py-3 cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid"
         />
       </div>
     </div>

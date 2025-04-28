@@ -21,6 +21,10 @@ export default {
         ],
       },
       colors: {
+        button: "#fecdd3",
+        buttonHover: "rgb(58, 73, 77)",
+        buttonHover2: "#fb7185",
+        newBorderColor: "#fb7185",
         mycolor: "#212121",
         beige: "#E5DCBC",
         header: "rgba(255, 255, 255, 0.8)",
@@ -35,8 +39,6 @@ export default {
         scrollThumb: "hsl(250, 12%, 80%)",
         first: "hsl(0, 90%, 60%)",
         firstAlt: "hsl(0, 90%, 65%)",
-        button: "rgba(32, 32, 32)",
-        buttonHover: "rgb(58, 73, 77)",
         dark: {
           header: "rgba(32, 32, 32, 0.9)",
           title: "hsl(0, 0%, 90%)",

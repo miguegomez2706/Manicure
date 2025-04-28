@@ -1,6 +1,8 @@
 import { useState } from "react";
 import icon from "../../../assets/image/icono/icono.ico";
 import { useNavigate } from "react-router-dom";
+import Btn from "../../atoms/Btn";
+import { FaWhatsapp } from "react-icons/fa";
 
 const NavBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -12,7 +14,7 @@ const NavBar = () => {
 
   return (
     <nav className="sticky top-0 bg-white shadow-md w-full z-50">
-      <div className="flex items-center justify-between px-6 md:px-10 lg:px-32 py-3">
+      <div className="flex items-center justify-between px-6 md:px-10 lg:px-32 py-6">
         {/* Logo y Nombre */}
         <div className="flex items-center gap-3 cursor-pointer">
           <img
@@ -52,7 +54,7 @@ const NavBar = () => {
             menuVisible ? "block" : "hidden"
           } lg:block`}
         >
-          <div className="flex flex-col lg:flex-row lg:items-center gap-4 py-4 lg:py-0 px-6 lg:px-0">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 py-4 lg:py-0 px-6 lg:px-0">
             <a
               onClick={() => {
                 navigate("/");
@@ -90,6 +92,18 @@ const NavBar = () => {
               Servicios
             </a>
           </div>
+        </div>
+        {/* Boton Número de teléfono */}
+        <div className="flex items-center font-numeros ">
+          <Btn
+            icon={<FaWhatsapp />}
+            bgColor="bg-button"
+            text="+3777-555-656"
+            textColor="text-black"
+            textHoverColor="text-white"
+            className="rounded-md"
+            to="https://wa.me/3777385674" // <<< Le pasas el enlace de WhatsApp
+          />
         </div>
       </div>
     </nav>

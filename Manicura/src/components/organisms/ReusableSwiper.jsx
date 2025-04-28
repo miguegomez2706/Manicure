@@ -22,7 +22,7 @@ const ReusableSwiper = () => {
           {slidesData.map((slide, index) => (
             <SwiperSlide key={index}>
               <div className="flex items-center justify-center w-full h-full">
-                <div className="w-full h-full mx-4 sm:mx-24">
+                <div className="w-full h-full">
                   <img
                     src={slide.imgSrc}
                     alt={slide.alt}
