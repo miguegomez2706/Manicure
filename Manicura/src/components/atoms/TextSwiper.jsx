@@ -17,11 +17,10 @@ const TextSwiper = () => {
       </h1>
       <div className="mt-5 sm:mt-8 flex justify-center w-full">
         <Btn
-          text="Reserva una cita"
+          text="Ver Servicios"
           onClick={() => navigate("/turnos")}
           className="px-7 py-3  text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900 bg-gray-900 hover:bg-transparent"
         />
-        Reserva una cita
       </div>
     </div>
   );

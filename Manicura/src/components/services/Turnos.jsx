@@ -49,17 +49,17 @@ const Turnos = () => {
             <p className="text-sm sm:text-[1.2rem] text-gray-700 mb-5">
               {servicio.descripcion}
             </p>
-            <p className="text-sm sm:text-lg text-gray-900 mb-10">
+            <p className="text-sm sm:text-lg text-gray-900">
               Precio:
               <span className="font-numeros font-bold ml-2">
                 ${servicio.precio.toLocaleString("es-ES")}
               </span>
             </p>
-            <Btn
+            {/* <Btn
               text="Reservar ahora" // Texto del botón
               onClick={() => openModal(servicio)} // Acción para abrir el modal con el servicio seleccionado
               className="w-full px-7 py-3 bg-button text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900"
-            />
+            /> */}
           </div>
         ))}
       </div>
