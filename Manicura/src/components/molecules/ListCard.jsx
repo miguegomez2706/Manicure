@@ -29,7 +29,6 @@ const ListCard = () => {
             bgColor="transparent"
             text={"Ver Curso!"}
             textColor="text-white"
-            textHoverColor="text-black"
             borderColor="border-white"
             borderColorHover="hover:border-black"
             to="/cursos"
