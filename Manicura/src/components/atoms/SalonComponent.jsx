@@ -19,11 +19,11 @@ const SalonComponent = () => {
         </div>
       </div>
       <div className="relative order-1">
-        <div className="overflow-hidden">
+        <div className="overflow-hidden flex items-center justify-center">
           <img
             src={imgLocal}
             alt="Salon Image"
-            className="object-cover w-full p-10 h-150"
+            className="object-cover p-10 h-[1000px]"
           />
         </div>
       </div>

@@ -55,31 +55,37 @@ const imgs = [
 
 const contenidoCursos = [
   {
+    id: 0,
     title: "React: Buscador de Canciones - Renderizado condicional de datos",
     nameTeacher: "Romina Gomez",
     price: 34000,
   },
   {
+    id: 1,
     title: "React: Buscador de Canciones - Renderizado condicional de datos",
     nameTeacher: "Romina Gomez",
     price: 30000,
   },
   {
+    id: 2,
     title: "Introducción a la ética empresarial",
     nameTeacher: "Romina Gomez",
     price: 21000,
   },
   {
+    id: 3,
     title: "Curso gratuito de fotografía con smartphone",
     nameTeacher: "Romina Gomez",
     price: 14000,
   },
   {
+    id: 4,
     title: "E-commerce para principiantes",
     nameTeacher: "Romina Gomez",
     price: 11000,
   },
   {
+    id: 5,
     title: "Fotografía para Instagram",
     nameTeacher: "Romina Gomez",
     price: 20000,

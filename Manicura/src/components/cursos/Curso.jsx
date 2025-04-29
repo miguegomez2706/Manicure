@@ -3,7 +3,8 @@ import Btn from "../atoms/Btn";
 import { FaPlayCircle } from "react-icons/fa";
 import PropTypes from "prop-types";
 
-const Curso = ({ title, nameTeacher, price }) => {
+const Curso = ({ curso }) => {
+  const { id, title, nameTeacher, price } = curso;
   return (
     <div className="w-80 rounded-md border overflow-hidden ">
       <div className="relative group">
@@ -25,7 +26,7 @@ const Curso = ({ title, nameTeacher, price }) => {
           Precio: <span className="font-numeros font-bold">${price}</span>
         </div>
         <div className="flex justify-center mb-5">
-          <Btn text="Inscribete ahora!" to="/InfoCurso" />
+          <Btn text="Inscribete ahora!" to={`/infocurso/${id}`} />
         </div>
       </div>
     </div>

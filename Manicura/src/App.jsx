@@ -23,12 +23,12 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/cursos" element={<ListCurso />} />
+          <Route path="/infocurso/:id" element={<InfoCurso />} />
           <Route path="/salon" element={<SalonPage />} />
-          <Route path="/Turnos" element={<Turnos />} />
-          <Route path="/Reserva" element={<Reserva />} />
-          <Route path="/InfoCurso" element={<InfoCurso />} />
-          <Route path="/Confirm" element={<Confirm />} />
-          <Route path="/Modal" element={<ModalConsulta />} />
+          <Route path="/turnos" element={<Turnos />} />
+          <Route path="/reserva" element={<Reserva />} />
+          <Route path="/confirm" element={<Confirm />} />
+          <Route path="/modal" element={<ModalConsulta />} />
         </Routes>
         <Footer />
       </div>
@@ -37,4 +37,3 @@ function App() {
 }
 
 export default App;
-//        <Route path="/Modal" element={<ModalConsulta />} />
