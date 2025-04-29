@@ -5,11 +5,11 @@ import { RiUserVoiceFill } from "react-icons/ri";
 import { CiCalendar } from "react-icons/ci";
 import { GoDeviceCameraVideo } from "react-icons/go";
 import BgWhiteCard from "../atoms/BgWhiteCard";
-import Btn from "../atoms/Btn";
+// import Btn from "../atoms/Btn";
 
 const InfoCurso = ({
-  titulo = "Titulo",
-  textPresentation = "texto de Presentacio",
+  titulo = "Diseños de Capi",
+  textPresentation = " Los preparados en las farmacias son aquellos elaborados en los laboratorios de las farmacias comunitarias y hospitalarias. Dentrode estos preparados, contamos con diferentes opciones: magistrales              y oficinales, los cuales comparten características en común perotambién presentan diferencias. En este curso, aprenderás un breverecorrido histórico y una introducción a los puntos másimportantes, para seguir por la legislación y las diferentesopciones de preparados. Luego conocerás las característicasedilicias, equipamiento y de materias primas además de los tiposde formas farmacéuticas a fabricar: estériles y no estériles. Por último, mediante la explicación del circuito de los preparadosmagistrales, comprenderás qué sucede desde que el paciente acudecon la receta, hasta que va a buscar su preparado. Si bien no esobligatoria la presencia de este tipo de laboratorios en lasfarmacias comunitarias, es útil para los auxiliares de farmaciatener una primera aproximación a las características generales de estos preparados, dado que las farmacias de todo el país pueden tener este tipo de laboratorios y los auxiliares pueden ayudar en algunas tareas al farmacéutico.",
 }) => {
   return (
     <div className="min-h-screen">
@@ -21,25 +21,7 @@ const InfoCurso = ({
           <div className="my-10">
             <h3 className="text-3xl mb-10">Presentación</h3>
             <p>
-              {/* Los preparados en las farmacias son aquellos elaborados en los
-              laboratorios de las farmacias comunitarias y hospitalarias. Dentro
-              de estos preparados, contamos con diferentes opciones: magistrales
-              y oficinales, los cuales comparten características en común pero
-              también presentan diferencias. En este curso, aprenderás un breve
-              recorrido histórico y una introducción a los puntos más
-              importantes, para seguir por la legislación y las diferentes
-              opciones de preparados. Luego conocerás las características
-              edilicias, equipamiento y de materias primas además de los tipos
-              de formas farmacéuticas a fabricar: estériles y no estériles. Por
-              último, mediante la explicación del circuito de los preparados
-              magistrales, comprenderás qué sucede desde que el paciente acude
-              con la receta, hasta que va a buscar su preparado. Si bien no es
-              obligatoria la presencia de este tipo de laboratorios en las
-              farmacias comunitarias, es útil para los auxiliares de farmacia
-              tener una primera aproximación a las características generales de
-              estos preparados, dado que las farmacias de todo el país pueden
-              tener este tipo de laboratorios y los auxiliares pueden ayudar en
-              algunas tareas al farmacéutico.
+              {/*
                */}
               {textPresentation}
             </p>
@@ -132,7 +114,7 @@ const InfoCurso = ({
                 </div>
               </div>
             </BgWhiteCard>
-            <BgWhiteCard customStyle="p-5 min-w-80">
+            {/* <BgWhiteCard customStyle="p-5 min-w-80">
               <div className="px-5">
                 <Btn
                   textColor="text-black"
@@ -145,7 +127,7 @@ const InfoCurso = ({
                   bgColor="trashover:bg-buttonHover hover:border-gray-900 bg-gray-900 hover:bg-transparent hover:text-black"
                 />
               </div>
-            </BgWhiteCard>
+            </BgWhiteCard> */}
           </div>
         </div>
       </div>

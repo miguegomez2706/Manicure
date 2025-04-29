@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { useNavigate } from "react-router-dom";
-import Btn from "../atoms/Btn";
 import ModalReserva from "./ModalReserva";
 import ResumenReserva from "./ResumenReserva";
 import Disponibilidad from "./Disponibilidad";
-import { servicios } from "../../assets/dataStore";
 
 const Reserva = () => {
   const [date, setDate] = useState(new Date());
@@ -14,8 +11,6 @@ const Reserva = () => {
   const [servicioSeleccionado, setServicioSeleccionado] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [horarioSeleccionado, setHorarioSeleccionado] = useState(null);
-
-  const navigate = useNavigate();
 
   const verificarDisponibilidad = (fecha) => {
     const disponible = Math.random() > 0.5;
@@ -59,6 +54,12 @@ const Reserva = () => {
         <div className="text-center p-5 shadow-md flex flex-col justify-center items-center rounded-lg">
           <h2 className="text-2xl text-title mb-4">Selecciona fecha y hora</h2>
           <Calendar
+            minDate={new Date()}
+            maxDate={new Date(new Date().setMonth(new Date().getMonth() + 2))}
+            tileDisabled={({ date }) =>
+              [0, 6].includes(date.getDay()) ||
+              date.toDateString() === "Tue May 27 2025"
+            }
             onChange={setDate}
             value={date}
             className="bg-white p-4 shadow-md rounded-md w-full max-w-xs sm:max-w-md !text-lg sm:!text-xl custom-calendar"
