@@ -54,13 +54,13 @@ const NavBar = () => {
             menuVisible ? "block" : "hidden"
           } lg:block`}
         >
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6 py-4 lg:py-0 px-6 lg:px-0">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 py-4 lg:py-0 px-6 lg:px-0 ">
             <a
               onClick={() => {
                 navigate("/");
                 setMenuVisible(false);
               }}
-              className="nav-link cursor-pointer"
+              className="nav-link cursor-pointer hover:text-textHover"
             >
               Inicio
             </a>
@@ -69,7 +69,7 @@ const NavBar = () => {
                 navigate("/cursos");
                 setMenuVisible(false);
               }}
-              className="nav-link cursor-pointer"
+              className="nav-link cursor-pointer hover:text-textHover"
             >
               Cursos
             </a>
@@ -78,7 +78,7 @@ const NavBar = () => {
                 navigate("/salon");
                 setMenuVisible(false);
               }}
-              className="nav-link cursor-pointer"
+              className="nav-link cursor-pointer hover:text-textHover"
             >
               Sobre Nosotros
             </a>
@@ -87,7 +87,7 @@ const NavBar = () => {
                 navigate("/Turnos");
                 setMenuVisible(false);
               }}
-              className="nav-link cursor-pointer"
+              className="nav-link cursor-pointer hover:text-textHover"
             >
               Servicios
             </a>

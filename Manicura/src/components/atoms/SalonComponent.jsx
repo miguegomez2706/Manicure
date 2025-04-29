@@ -15,7 +15,7 @@ const SalonComponent = () => {
           profesionalismo.
         </p>
         <div className=" w-[60%]">
-          <Btn text="¡Conócenos!" to="salon" />
+          <Btn text="¡Conócenos!" textHoverColor="text-white" to="salon" />
         </div>
       </div>
       <div className="relative order-1">

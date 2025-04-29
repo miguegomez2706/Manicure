@@ -18,7 +18,7 @@ function App() {
   }, []);
   return (
     <Router>
-      <div className="font-playfair">
+      <div className="font-playfair bg-body">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
