@@ -1,10 +1,36 @@
+// SWIPER
+
+import swiper2 from "../image/swiper/swiper2.webp";
+import swiper3 from "../image/swiper/swiper3.webp";
+import swiper4 from "../image/swiper/swiper4.webp";
+import swiper6 from "../image/swiper/swiper6.webp";
+import swiper7 from "../image/swiper/swiper7.webp";
+
 // import { info } from "autoprefixer";
 import img1 from "../image/semipermanente/semi1.jpeg";
 import img2 from "../image/semipermanente/semi2.jpeg";
 import img3 from "../image/semipermanente/semi3.jpeg";
 import img4 from "../image/semipermanente/semi4.jpeg";
 import img7 from "../image/semipermanente/semi7.jpeg";
-import yellownailImage from "../../assets/image/swiper/swiper.jpg";
+
+const slidesData = [
+  {
+    imgSrc: swiper7,
+    alt: "Slide 1",
+  },
+  {
+    imgSrc: swiper2,
+    alt: "Slide 1",
+  },
+  {
+    imgSrc: swiper4,
+    alt: "Slide 1",
+  },
+  {
+    imgSrc: swiper6,
+    alt: "Slide 1",
+  },
+];
 
 const imgs = [
   {
@@ -58,12 +84,6 @@ const contenidoCursos = [
     nameTeacher: "Romina Gomez",
     price: 20000,
   },
-];
-
-const slidesData = [
-  { imgSrc: yellownailImage, alt: "Slide 1" },
-  { imgSrc: yellownailImage, alt: "Slide 2" },
-  { imgSrc: yellownailImage, alt: "Slide 3" },
 ];
 
 const imgsTotal = [
