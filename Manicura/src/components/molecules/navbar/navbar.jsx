@@ -14,9 +14,9 @@ const NavBar = () => {
 
   return (
     <nav className="sticky top-0 bg-white shadow-md w-full z-50">
-      <div className="flex items-center justify-between px-6 md:px-10 lg:px-32 py-6">
+      <div className="flex items-center justify-between px-6 py-4 sm:py-6 sm:px-10 lg:px-32">
         {/* Logo y Nombre */}
-        <div className="flex items-center gap-3 cursor-pointer">
+        <div className="flex flex-col items-center gap-0 sm:flex-row sm:gap-3 cursor-pointer order-2 sm:order-none">
           <img
             src={icon}
             alt="Logo"
@@ -32,7 +32,7 @@ const NavBar = () => {
         </div>
 
         {/* Icono Menú (Móvil) */}
-        <div className="lg:hidden">
+        <div className="lg:hidden order-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -48,13 +48,13 @@ const NavBar = () => {
           </svg>
         </div>
 
-        {/* Menú agregando algo pra subnir y que el chizzi vea de nuevo o traiga todo mis cambios!!*/}
+        {/* Menú */}
         <div
           className={`absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none transition-all duration-300 ${
             menuVisible ? "block" : "hidden"
           } lg:block`}
         >
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6 py-4 lg:py-0 px-6 lg:px-0 ">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 py-4 lg:py-0 px-6 lg:px-0">
             <a
               onClick={() => {
                 navigate("/");
@@ -93,16 +93,17 @@ const NavBar = () => {
             </a>
           </div>
         </div>
-        {/* Boton Número de teléfono */}
-        <div className="flex items-center font-numeros ">
+
+        {/* Botón Número de teléfono */}
+        <div className="flex flex-col items-end sm:items-center justify-end order-2 font-numeros h-full">
           <Btn
             icon={<FaWhatsapp />}
             bgColor="bg-button"
             text="+3777-555-656"
             textColor="text-black"
             textHoverColor="text-white"
-            className="rounded-md"
-            to="https://wa.me/3777385674" // <<< Le pasas el enlace de WhatsApp
+            className="rounded-md px-2 sm:px-7"
+            to="https://wa.me/3777385674"
           />
         </div>
       </div>
