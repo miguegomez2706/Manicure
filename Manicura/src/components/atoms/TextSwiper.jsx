@@ -15,7 +15,7 @@ const TextSwiper = () => {
         <br />
         versión?
       </h1>
-      <div className="mt-5 sm:mt-8 flex justify-center w-full">
+      <div className="mt-0 sm:mt-8 flex justify-center w-full">
         <Btn
           text="Reserva una cita"
           bgColor="bg-button"
