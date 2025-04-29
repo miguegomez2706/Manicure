@@ -22,7 +22,7 @@ const Commercial = () => {
           </p>
           <div className="w-[50%]">
             <Btn
-              to={"/Turnos"}
+              to={"/turnos"}
               textHoverColor="text-white"
               text="Ver Precios"
             />

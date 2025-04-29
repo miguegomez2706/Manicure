@@ -21,13 +21,9 @@ const ListCurso = () => {
     >
       <h1 className="text-4xl py-10 ml-5 sm:ml-10 ">Cursos</h1>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 py-5 sm:p-5 gap-7 justify-center">
-        {contenidoCursos.map((contenidoCurso, index) => (
-          <div key={index} className="flex justify-center">
-            <Curso
-              nameTeacher={contenidoCurso.nameTeacher}
-              title={contenidoCurso.title}
-              price={contenidoCurso.price}
-            />
+        {contenidoCursos.map((contenidoCurso) => (
+          <div key={contenidoCurso.id} className="flex justify-center">
+            <Curso key={contenidoCurso.id} curso={contenidoCurso} />
           </div>
         ))}
       </div>
