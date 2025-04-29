@@ -8,6 +8,7 @@ const Btn = ({
   textHoverColor = "",
   hoverBorderColor = "",
   borderColor = "border-gray-900",
+  borderColorHover = "border-black",
   className = "",
   to = "",
   hoverUnderline = false,
@@ -30,11 +31,13 @@ const Btn = ({
   return (
     <button
       onClick={handleClick}
-      className={`flex items-center justify-center gap-2 w-full px-7 py-3 ${bgColor} ${textColor} cursor-pointer text-base ${
+      className={`flex items-center justify-center gap-2 w-full px-7 py-3 transition duration-200 ease-in-out ${bgColor} ${textColor} cursor-pointer text-base ${
         disableHover ? "" : "hover:bg-[#fb7185]"
       } border-2 border-solid ${borderColor} ${hoverBorderColor} ${
         hoverUnderline ? "hover:underline" : ""
-      } ${textHoverColor ? `hover:${textHoverColor}` : ""} ${className}`}
+      } ${textHoverColor ? `hover:${textHoverColor}` : ""} 
+      ${borderColorHover}
+      ${className}`}
     >
       {icon && <span className="text-xl">{icon}</span>} {/* Icono si existe */}
       {text}

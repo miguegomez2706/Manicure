@@ -15,20 +15,20 @@ import img7 from "../image/semipermanente/semi7.jpeg";
 
 const slidesData = [
   {
-    imgSrc: swiper7,
+    imgSrc: swiper6,
     alt: "Slide 1",
+  },
+  {
+    imgSrc: swiper7,
+    alt: "Slide 2",
   },
   {
     imgSrc: swiper2,
-    alt: "Slide 1",
+    alt: "Slide 3",
   },
   {
     imgSrc: swiper4,
-    alt: "Slide 1",
-  },
-  {
-    imgSrc: swiper6,
-    alt: "Slide 1",
+    alt: "Slide 4",
   },
 ];
 
