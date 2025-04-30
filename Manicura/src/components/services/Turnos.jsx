@@ -30,22 +30,26 @@ const Turnos = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center p-6 overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center p-6 overflow-hidden ">
       {/* Fondo con opacidad */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${fondo})`,
-          backgroundRepeat: "repeat",
-          backgroundSize: "auto",
-          opacity: 0.1, // Más opaco que antes
+          backgroundColor: "#fecdd3",
+          WebkitMaskImage: `url(${fondo})`,
+          maskImage: `url(${fondo})`,
+          WebkitMaskRepeat: "repeat",
+          maskRepeat: "repeat",
+          WebkitMaskSize: "auto",
+          maskSize: "auto",
+          opacity: 0.7,
           pointerEvents: "none",
         }}
       />
 
       {/* Contenido principal */}
-      <div className="relative z-10 w-full max-w-6xl">
-        <h1 className="font-playfair text-4xl md:text-6xl py-8  mb-6 text-gray-800 text-center w-full">
+      <div className="relative z-10 w-full max-w-6xl animate-fade-in">
+        <h1 className="font-playfair text-4xl md:text-6xl py-8  mb-6 text-title text-center w-full">
           Servicios Disponibles
         </h1>
 
@@ -53,7 +57,7 @@ const Turnos = () => {
           {servicios.map((servicio, index) => (
             <div
               key={index}
-              className=" pt-10 pb-6 border-t border-black flex flex-col items-start"
+              className=" pt-10 pb-6 border-t border-title flex flex-col items-start"
             >
               <h2 className="text-2xl sm:text-3xl text-gray-900 mb-4 px-8">
                 {servicio.nombre}
