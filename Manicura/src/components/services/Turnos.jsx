@@ -59,15 +59,27 @@ const Turnos = () => {
                 {servicio.nombre}
               </h2>
               <hr className="my-4 border-gray-300 w-full" />
-              <p className="text-sm sm:text-[1.2rem] text-gray-700 mb-5 px-8">
+              <p className="text-sm sm:text-[1.2rem] text-gray-700 mb-5 px-8 font-semibold">
                 {servicio.descripcion}
               </p>
-              <p className="text-sm sm:text-lg text-gray-900 px-8">
-                Precio:
-                <span className="font-numeros font-bold ml-2">
-                  ${servicio.precio.toLocaleString("es-ES")}
-                </span>
-              </p>
+              <div className="w-[70%]">
+                <p className="text-sm sm:text-[1.2rem] text-gray-700 mb-5 px-8">
+                  {servicio.subDescripcion}
+                </p>
+              </div>
+              <div className="w-full space-y-2 px-8">
+                {servicio.opciones.map((opcion, idx) => (
+                  <div
+                    key={idx}
+                    className="flex justify-between text-sm sm:text-lg text-gray-800"
+                  >
+                    <span>{opcion.nombre}</span>
+                    <span className="font-numeros font-semibold">
+                      ${opcion.precio.toLocaleString("es-ES")}
+                    </span>
+                  </div>
+                ))}
+              </div>
               {/* <Btn
                 text="Reservar ahora"
                 onClick={() => openModal(servicio)}
