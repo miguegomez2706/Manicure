@@ -21,7 +21,11 @@ const Commercial = () => {
             Mejores Precios
           </p>
           <div className="w-[50%]">
-            <Btn to={"/Turnos"} text="Ver Precios" />
+            <Btn
+              to={"/turnos"}
+              textHoverColor="text-white"
+              text="Ver Precios"
+            />
           </div>
         </div>
       </div>

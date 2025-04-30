@@ -4,7 +4,7 @@ import { imgs } from "../../assets/dataStore";
 
 const ListCard = () => {
   return (
-    <div className="flex flex-col bg-mycolor h-full pt-6 mt-12">
+    <div className="flex flex-col bg-title h-full pt-6 mt-12">
       <div className="flex items-end justify-center text-4xl md:text-5xl m-10">
         <div className="mr-10 text-white">
           <h1>¡Convertite en una profesional!</h1>
@@ -24,8 +24,15 @@ const ListCard = () => {
             />
           ))}
         </div>
-        <div className="flex justify-center items-center pb-10 w-[50%]">
-          <Btn text={"Ver Curso!"} to="/cursos" />
+        <div className="flex justify-center items-center pb-10 w-[50%] lg:mt-5">
+          <Btn
+            bgColor="transparent"
+            text={"Ver Curso!"}
+            textColor="text-white"
+            borderColor="border-white"
+            borderColorHover="hover:border-black"
+            to="/cursos"
+          />
         </div>
       </div>
     </div>

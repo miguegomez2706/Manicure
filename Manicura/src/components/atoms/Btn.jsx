@@ -3,35 +3,44 @@ import { useNavigate } from "react-router-dom"; // Importamos useNavigate para m
 const Btn = ({
   onClick,
   text = "Botón",
-  bgColor = "bg-gray-800",
-  textColor = "text-white",
-  hoverBorderColor = "hover:border-gray-700",
+  bgColor = "",
+  textColor = "text-black",
+  textHoverColor = "",
+  hoverBorderColor = "",
   borderColor = "border-gray-900",
+  borderColorHover = "border-black",
   className = "",
   to = "",
   hoverUnderline = false,
   disableHover = false,
-  trasparent = false,
+  icon = null,
 }) => {
   const navigate = useNavigate(); // Usamos useNavigate para manejar la navegación
 
   const handleClick = () => {
-    if (onClick) onClick(); // Ejecutamos la función onClick si se pasa alguna
+    if (onClick) onClick();
     if (to) {
-      navigate(to); // Redirigimos solo si `to` está definido
+      if (to.startsWith("http")) {
+        window.open(to, "_blank"); // Si es un enlace externo, abrir en nueva pestaña
+      } else {
+        navigate(to); // Si es interno, navegar
+      }
     }
   };
 
   return (
     <button
-      onClick={handleClick} // Usamos la función handleClick que maneja la acción y navegación
-      className={`w-full px-7 py-3 ${bgColor} ${textColor} cursor-pointer text-base ${
-        disableHover ? "" : "hover:bg-gray-600"
-      } mt-8 sm:mt-4   ${borderColor} ${hoverBorderColor} ${
+      onClick={handleClick}
+      className={`flex items-center justify-center gap-2 w-full px-7 py-3 transition duration-200 ease-in-out ${bgColor} ${textColor} cursor-pointer text-base ${
+        disableHover ? "" : "hover:bg-[#fb7185]"
+      } border-2 border-solid ${borderColor} ${hoverBorderColor} ${
         hoverUnderline ? "hover:underline" : ""
-      } ${className} ${trasparent ? "bg-transparent" : ""}`}
+      } ${textHoverColor ? `hover:${textHoverColor}` : ""} 
+      ${borderColorHover}
+      ${className}`}
     >
-      {text} {/* Texto dinámico */}
+      {icon && <span className="text-xl">{icon}</span>} {/* Icono si existe */}
+      {text}
     </button>
   );
 };

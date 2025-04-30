@@ -5,43 +5,66 @@ import { RiUserVoiceFill } from "react-icons/ri";
 import { CiCalendar } from "react-icons/ci";
 import { GoDeviceCameraVideo } from "react-icons/go";
 import BgWhiteCard from "../atoms/BgWhiteCard";
-import Btn from "../atoms/Btn";
+import { useParams } from "react-router-dom";
+// import Btn from "../atoms/Btn";
 
-const InfoCurso = ({
-  titulo = "Titulo",
-  textPresentation = "texto de Presentacio",
-}) => {
+const InfoCurso = () => {
+  const { id } = useParams();
+
+  // Ejemplo de datos (puedes obtenerlos de una API o estado)
+  const cursos = [
+    {
+      id: 1,
+      nombre: "Curso de React",
+      descripcion: "Aprende React desde cero",
+      detalles: "Un curso completo sobre React JS.",
+    },
+    {
+      id: 2,
+      nombre: "Curso de Tailwind",
+      descripcion: "Domina Tailwind CSS",
+      detalles: "Apr  aprender Tailwind desde cero.",
+    },
+    {
+      id: 3,
+      nombre: "Curso de Tailwind",
+      descripcion: "Domina Tailwind CSS",
+      detalles: "Apr  aprender Tailwind desde cero.",
+    },
+    {
+      id: 4,
+      nombre: "Curso de Tailwind",
+      descripcion: "Domina Tailwind CSS",
+      detalles: "Apr  aprender Tailwind desde cero.",
+    },
+    {
+      id: 5,
+      nombre: "Curso de Tailwind",
+      descripcion: "Domina Tailwind CSS",
+      detalles: "Apr  aprender Tailwind desde cero.",
+    },
+  ];
+
+  const curso = cursos.find((curso) => curso.id === parseInt(id));
+
+  if (!curso) {
+    return <div className="text-center text-red-500">Curso no encontrado</div>;
+  }
   return (
     <div className="min-h-screen">
       <div className="bg-gray-500 h-72 text-white flex items-center justify-center px-5">
-        <h1 className="text-3xl text-center max-w-4xl">{titulo}</h1>
+        <h1 className="text-3xl text-center max-w-4xl">
+          {/*aca va el titulo*/}
+          {curso.nombre}
+        </h1>
       </div>
       <div className="mx-5 md:mx-44 grid grid-cols-1 lg:grid-cols-4 text-black mt-10 lg:gap-10">
         <div className="md:col-span-3 lg:pr-14 order-2">
           <div className="my-10">
             <h3 className="text-3xl mb-10">Presentación</h3>
             <p>
-              {/* Los preparados en las farmacias son aquellos elaborados en los
-              laboratorios de las farmacias comunitarias y hospitalarias. Dentro
-              de estos preparados, contamos con diferentes opciones: magistrales
-              y oficinales, los cuales comparten características en común pero
-              también presentan diferencias. En este curso, aprenderás un breve
-              recorrido histórico y una introducción a los puntos más
-              importantes, para seguir por la legislación y las diferentes
-              opciones de preparados. Luego conocerás las características
-              edilicias, equipamiento y de materias primas además de los tipos
-              de formas farmacéuticas a fabricar: estériles y no estériles. Por
-              último, mediante la explicación del circuito de los preparados
-              magistrales, comprenderás qué sucede desde que el paciente acude
-              con la receta, hasta que va a buscar su preparado. Si bien no es
-              obligatoria la presencia de este tipo de laboratorios en las
-              farmacias comunitarias, es útil para los auxiliares de farmacia
-              tener una primera aproximación a las características generales de
-              estos preparados, dado que las farmacias de todo el país pueden
-              tener este tipo de laboratorios y los auxiliares pueden ayudar en
-              algunas tareas al farmacéutico.
-               */}
-              {textPresentation}
+              {/*aca va la presentacion*/}
+              {curso.descripcion}
             </p>
           </div>
           <div>
@@ -76,11 +99,7 @@ const InfoCurso = ({
             </div>
             <div className="my-10">
               <h1 className="text-3xl mb-5">Objetivos generales</h1>
-              <p>
-                Comprender las características más importantes relacionadas con
-                los preparados elaborados en los laboratorios de las farmacias
-                comunitarias.
-              </p>
+              <p>{curso.detalles}</p>
             </div>
             <div className="my-10">
               <h1 className="text-3xl mb-5">Equipo docente</h1>
@@ -132,7 +151,7 @@ const InfoCurso = ({
                 </div>
               </div>
             </BgWhiteCard>
-            <BgWhiteCard customStyle="p-5 min-w-80">
+            {/* <BgWhiteCard customStyle="p-5 min-w-80">
               <div className="px-5">
                 <Btn
                   textColor="text-black"
@@ -145,7 +164,7 @@ const InfoCurso = ({
                   bgColor="trashover:bg-buttonHover hover:border-gray-900 bg-gray-900 hover:bg-transparent hover:text-black"
                 />
               </div>
-            </BgWhiteCard>
+            </BgWhiteCard> */}
           </div>
         </div>
       </div>
