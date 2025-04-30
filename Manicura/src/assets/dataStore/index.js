@@ -127,14 +127,60 @@ const perfiles = [
 
 // Arreglo con los datos de los servicios
 const servicios = [
-  { nombre: "Corte de Cabello", descripcion: "Corte básico.", precio: 15000 },
-  { nombre: "Manicura", descripcion: "Manicura básica.", precio: 15000 },
-  { nombre: "Pedicura", descripcion: "Pedicura clásica.", precio: 20000 },
-  { nombre: "Masaje Facial", descripcion: "Masaje relajante.", precio: 10000 },
   {
-    nombre: "Tinte de Cabello",
-    descripcion: "Cambio de color.",
-    precio: 40000,
+    nombre: "Manicura",
+    descripcion: "Sistema Soft Gel.",
+    subDescripcion:
+      "La Técnica de Soft Gel consiste en un método de extensión de uñas mediante tips que se adhieren directamente a la superficiae de la uñas natural",
+    opciones: [
+      { nombre: "Esmaltado Liso.", precio: 15000 },
+      { nombre: "Diseño en 3 uñas", precio: 17000 },
+      { nombre: "Diseño en las 10 uñas", precio: 19500 },
+    ],
+  },
+  {
+    nombre: "",
+    descripcion: "Sistema De Esculpidas.",
+    opciones: [
+      { nombre: "Esmaltado Liso", precio: 18500 },
+      { nombre: "Diseño hasta en 3 uñas", precio: 20500 },
+      { nombre: "Diseño en las 10 uñas", precio: 25000 },
+    ],
+  },
+  {
+    nombre: "",
+    descripcion: "Esmaltado Semipermanente.",
+    opciones: [
+      { nombre: "Esmaltado Liso", precio: 10000 },
+      { nombre: "Diseño hasta en 3 uñas", precio: 12500 },
+      { nombre: "Diseño en las 10 uñas", precio: 13500 },
+    ],
+  },
+  {
+    nombre: "",
+    descripcion: "Sistema Kapping.",
+    opciones: [
+      { nombre: "Esmaltado Liso", precio: 12500 },
+      { nombre: "Diseño hasta en 3 uñas", precio: 15500 },
+      { nombre: "Diseño en las 10 uñas", precio: 17500 },
+    ],
+  },
+  {
+    nombre: "Pedicura",
+    descripcion: "Esmaltado Semipermanente en Pies.",
+    opciones: [
+      { nombre: "Esmaltado Liso", precio: 13500 },
+      { nombre: "Diseño en todas la uñas", precio: 15500 },
+    ],
+  },
+  {
+    nombre: "",
+    descripcion: "Spa de Pies.",
+    opciones: [
+      { nombre: "Spa de pies (Liso)", precio: 17000 },
+      { nombre: "Diseño 1 o 2 uñas", precio: 1000 },
+      { nombre: "Diseño en 10 uñas", precio: 2000 },
+    ],
   },
 ];
 
