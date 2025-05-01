@@ -3,9 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { slidesData } from "../../assets/dataStore";
 
-const ReusableSwiper = () => {
+const ReusableSwiper = ({
+  width = "w-full",
+  height = "h-[30vh] sm:h-[100vh]",
+  slide = slidesData,
+}) => {
   return (
-    <div className="w-full h-[30vh] sm:h-[100vh] overflow-hidden">
+    <div className={`${width} ${height} overflow-hidden `}>
       <Swiper
         modules={[Autoplay]}
         spaceBetween={0}
@@ -18,7 +22,7 @@ const ReusableSwiper = () => {
         speed={1200}
         className="w-full h-full"
       >
-        {slidesData.map((slide, index) => (
+        {slide.map((slide, index) => (
           <SwiperSlide key={index} className="w-full h-full">
             <div className="w-full h-full">
               <img

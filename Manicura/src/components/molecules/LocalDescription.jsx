@@ -8,15 +8,21 @@ const LocalDescription = () => {
       <div className="my-10">
         <div className="flex mt-5">
           <p className="font-semibold">Teléfono:</p>
-          <p className="ml-2">+54 362 494-0856</p>
+          <p className="ml-2 font-numeros">+54 362 494-0856</p>
         </div>
         <div className="flex mt-5 ">
           <p className="font-semibold">Horarios: </p>
-          <p className="ml-2">11:00 AM - 8:00 PM Lunes a Sabado</p>
+          <p className="ml-2">
+            <span className="font-numeros">11:00</span> AM -{" "}
+            <span className="font-numeros">8:00</span> PM Lunes a Sabado
+          </p>
         </div>
         <div className="flex mt-5 ">
           <p className="font-semibold">Direccion: </p>
-          <p className="ml-2">Necochea 307 OF 3, H3500 Resistencia</p>
+          <p className="ml-2">
+            Necochea <span className="font-numeros">307</span> OF{" "}
+            <span className="font-numeros">3, H3500</span> Resistencia
+          </p>
         </div>
         <div className="flex mt-5 ">
           <p className="font-semibold">Email: </p>
