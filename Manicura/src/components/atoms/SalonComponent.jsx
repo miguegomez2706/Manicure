@@ -19,7 +19,6 @@ const SalonComponent = () => {
         </div>
       </div>
       <div className="relative order-1">
-
         <div className="overflow-hidden ">
           <img
             src={imgLocal}
