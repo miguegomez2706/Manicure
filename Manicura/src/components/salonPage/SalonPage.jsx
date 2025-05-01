@@ -1,7 +1,7 @@
 import Perfil from "../nosotros/Perfil";
 import AboutUs from "../atoms/AboutUs";
 import OurLocal from "../organisms/OurLocal";
-import { perfiles } from "../../assets/dataStore";
+import { perfiles, slidesAboutUs } from "../../assets/dataStore";
 import ReusableSwiper from "../organisms/ReusableSwiper";
 import { useEffect, useState } from "react";
 
@@ -35,8 +35,8 @@ const SalonPage = () => {
         <h1 className="flex text-5xl font-normal items-center justify-center mb-4">
           ¡Descubre Nuestra Sucursal!
         </h1>
-        <div className="">
-          <ReusableSwiper />
+        <div className="mt-10 mb-20 shadow-2xl rounded-lg overflow-hidden">
+          <ReusableSwiper slide={slidesAboutUs} height="h-[550px]" />
         </div>
         <OurLocal />
       </section>

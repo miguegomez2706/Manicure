@@ -6,6 +6,9 @@ import swiper4 from "../image/swiper/swiper4.webp";
 import swiper6 from "../image/swiper/swiper6.webp";
 import swiper7 from "../image/swiper/swiper7.webp";
 
+// SWIPER SOBRE NOSOTROS.
+import aboutus1 from "../image/sobreNosotros/aboutus1.jpg";
+
 // import { info } from "autoprefixer";
 import img1 from "../image/semipermanente/semi1.jpeg";
 import img2 from "../image/semipermanente/semi2.jpeg";
@@ -29,6 +32,21 @@ const slidesData = [
   {
     imgSrc: swiper4,
     alt: "Slide 4",
+  },
+];
+
+const slidesAboutUs = [
+  {
+    imgSrc: aboutus1,
+    alt: "Slide 1",
+  },
+  {
+    imgSrc: aboutus1,
+    alt: "Slide 1",
+  },
+  {
+    imgSrc: aboutus1,
+    alt: "Slide 1",
   },
 ];
 
@@ -184,4 +202,12 @@ const servicios = [
   },
 ];
 
-export { imgs, imgsTotal, slidesData, perfiles, servicios, contenidoCursos };
+export {
+  imgs,
+  imgsTotal,
+  slidesData,
+  perfiles,
+  servicios,
+  contenidoCursos,
+  slidesAboutUs,
+};

@@ -99,11 +99,11 @@ const NavBar = () => {
           <Btn
             icon={<FaWhatsapp />}
             bgColor="bg-button"
-            text="+3777-555-656"
+            text="362 494-0856"
             textColor="text-black"
             textHoverColor="text-white"
             className="rounded-md px-2 sm:px-7"
-            to="https://wa.me/3777385674"
+            to="https://wa.me/+543624940856"
           />
         </div>
       </div>
