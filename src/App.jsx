@@ -17,7 +17,7 @@ function App() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Router basename="/Manicura">
+    <Router basename="/">
       <div className="font-playfair bg-body">
         <Navbar />
         <Routes>
