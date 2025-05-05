@@ -66,8 +66,8 @@ const Turnos = () => {
               <p className="text-sm sm:text-[1.2rem] text-gray-700 mb-5 px-8 font-semibold">
                 {servicio.descripcion}
               </p>
-              <div className="w-[70%]">
-                <p className="text-sm sm:text-[1.2rem] text-gray-700 mb-5 px-8">
+              <div className="xl:w-[70%]">
+                <p className="text-sm sm:text-[1.2rem] text-gray-700 mb-5 px-8 leading-7">
                   {servicio.subDescripcion}
                 </p>
               </div>

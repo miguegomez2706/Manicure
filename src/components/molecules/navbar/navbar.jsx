@@ -14,7 +14,7 @@ const NavBar = () => {
 
   return (
     <nav className="sticky top-0 bg-white shadow-md w-full z-50">
-      <div className="flex items-center justify-between px-6 py-4 sm:py-6 sm:px-10 lg:px-32">
+      <div className="flex items-center justify-between px-2 py-4 sm:py-6 sm:px-10 lg:px-32">
         {/* Logo y Nombre */}
         <div className="flex flex-col items-center gap-0 sm:flex-row sm:gap-3 cursor-pointer order-2 sm:order-none">
           <img
@@ -27,7 +27,7 @@ const NavBar = () => {
             onClick={() => navigate("/")}
             className="text-lg font-semibold italic "
           >
-            Nails Art
+            Romina Gomez
           </a>
         </div>
 
