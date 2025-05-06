@@ -4,11 +4,14 @@ import Btn from "../atoms/Btn";
 import { servicios } from "../../assets/dataStore";
 import ModalReserva from "./ModalReserva";
 import fondo from "../../assets/image/fondo/glamorous.svg";
+import SelectorDePrecio from "../molecules/selectorDePrecio/SelectorDePrecio";
 
 const Turnos = () => {
   const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
+  const [mostrarSelector, setMostrarSelector] = useState(false);
+  const [servicioParaSeleccionar, setServicioParaSeleccionar] = useState(null);
 
   const openModal = (servicio) => {
     setSelectedService(servicio);
@@ -25,8 +28,24 @@ const Turnos = () => {
     setSelectedService(null);
   };
 
-  const confirmReserva = () => {
-    navigate("/reserva");
+  const confirmReserva = (reserva) => {
+    navigate("/reserva", { state: { reserva } });
+  };
+
+  const handleReservar = (servicio) => {
+    setServicioParaSeleccionar(servicio);
+    setMostrarSelector(true);
+  };
+
+  const handleSeleccionDeOpcion = (opcionSeleccionada) => {
+    const servicioConOpcion = {
+      ...servicioParaSeleccionar,
+      precio: opcionSeleccionada.precio,
+      nombre: opcionSeleccionada.nombre,
+      descripcion: servicioParaSeleccionar.descripcion,
+    };
+    setMostrarSelector(false);
+    openModal(servicioConOpcion);
   };
 
   return (
@@ -49,7 +68,7 @@ const Turnos = () => {
 
       {/* Contenido principal */}
       <div className="relative z-10 w-full max-w-6xl animate-fade-in">
-        <h1 className="font-playfair text-4xl md:text-6xl py-8  mb-6 text-title text-center w-full">
+        <h1 className="font-playfair text-4xl md:text-6xl py-8 mb-6 text-title text-center w-full">
           Servicios Disponibles
         </h1>
 
@@ -57,7 +76,7 @@ const Turnos = () => {
           {servicios.map((servicio, index) => (
             <div
               key={index}
-              className=" pt-10 pb-6 border-t border-title flex flex-col items-start"
+              className="pt-10 pb-6 border-t border-title flex flex-col items-start"
             >
               <h2 className="text-2xl sm:text-3xl text-gray-900 mb-4 px-8">
                 {servicio.nombre}
@@ -84,15 +103,23 @@ const Turnos = () => {
                   </div>
                 ))}
               </div>
-              {/* <Btn
+              <Btn
+                onClick={() => handleReservar(servicio)}
                 text="Reservar ahora"
-                onClick={() => openModal(servicio)}
-                className="w-full px-7 py-3 bg-button text-white cursor-pointer text-xl mt-8 sm:mt-4 border-2 border-solid border-gray-900 hover:bg-buttonHover hover:border-gray-900"
-              /> */}
+                className="w-96 px-7 py-3 bg-button cursor-pointer text-xl mt-8 sm:mt-8 border-2 border-solid mx-auto"
+              />
             </div>
           ))}
         </div>
       </div>
+
+      {mostrarSelector && servicioParaSeleccionar && (
+        <SelectorDePrecio
+          servicio={servicioParaSeleccionar}
+          onSelect={handleSeleccionDeOpcion}
+          onCancel={() => setMostrarSelector(false)}
+        />
+      )}
 
       <ModalReserva
         isOpen={modalOpen}
