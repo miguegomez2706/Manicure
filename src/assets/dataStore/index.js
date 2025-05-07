@@ -149,7 +149,7 @@ const servicios = [
     nombre: "Manicura",
     descripcion: "Sistema Soft Gel.",
     subDescripcion:
-      "La Técnica de Soft Gel consiste en un método de extensión de uñas mediante tips que se adhieren directamente a la superficiae de la uñas natural",
+      "Consiste en un método de extensión de uñas mediante tips que se adhieren directamente a la superficiae de la uñas natural",
     opciones: [
       { nombre: "Esmaltado Liso.", precio: 15000 },
       { nombre: "Diseño en 3 uñas", precio: 17000 },
@@ -159,6 +159,8 @@ const servicios = [
   {
     nombre: "",
     descripcion: "Sistema De Esculpidas.",
+    subDescripcion:
+      "Son extensiones que se contruyen a partir de la uña natural con material acrigel o gel. Estas permiten restaurar y reconstruir uñas mordidas o simplemente, lucir uñas mas largas.",
     opciones: [
       { nombre: "Esmaltado Liso", precio: 18500 },
       { nombre: "Diseño hasta en 3 uñas", precio: 20500 },
@@ -168,6 +170,8 @@ const servicios = [
   {
     nombre: "",
     descripcion: "Esmaltado Semipermanente.",
+    subDescripcion:
+      "Es un esmaltado de secado inmediato y de larga duracion que mantiene un resultado reluciente. Este efecto se consigue con la palicacion de esmaltes especificos y el secado de las uñas en una luz UV o LED.",
     opciones: [
       { nombre: "Esmaltado Liso", precio: 10000 },
       { nombre: "Diseño hasta en 3 uñas", precio: 12500 },
@@ -177,6 +181,8 @@ const servicios = [
   {
     nombre: "",
     descripcion: "Sistema Kapping.",
+    subDescripcion:
+      "Consiste en aplicar una fina capa de acrigel o gel fortificador sobre la uña que actua como una barrera protectora.",
     opciones: [
       { nombre: "Esmaltado Liso", precio: 12500 },
       { nombre: "Diseño hasta en 3 uñas", precio: 15500 },
@@ -186,6 +192,8 @@ const servicios = [
   {
     nombre: "Pedicura",
     descripcion: "Esmaltado Semipermanente en Pies.",
+    subDescripcion:
+      "Tecnica estetica de pedicura que consiste en restaurar y, seguidamente, embellecer las uñas",
     opciones: [
       { nombre: "Esmaltado Liso", precio: 13500 },
       { nombre: "Diseño en todas la uñas", precio: 15500 },
@@ -194,6 +202,8 @@ const servicios = [
   {
     nombre: "",
     descripcion: "Spa de Pies.",
+    subDescripcion:
+      "Es un tratamiento intensivo que cuida los pies de forma profunda y relajante.",
     opciones: [
       { nombre: "Spa de pies (Liso)", precio: 17000 },
       { nombre: "Diseño 1 o 2 uñas", precio: 1000 },

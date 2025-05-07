@@ -4,7 +4,7 @@ const Btn = ({
   onClick,
   text = "Botón",
   bgColor = "",
-  textColor = "text-black",
+  textColor = "text-title",
   textHoverColor = "",
   hoverBorderColor = "",
   borderColor = "border-gray-900",

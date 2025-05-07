@@ -1,4 +1,4 @@
-// components/atoms/ResumenReserva.jsx
+import { useState } from "react";
 import Btn from "../atoms/Btn";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +10,19 @@ const ResumenReserva = ({
   botonTexto = "Siguiente",
 }) => {
   const navigate = useNavigate();
+  const [mostrarModal, setMostrarModal] = useState(false);
+  const [precioElegido, setPrecioElegido] = useState(null);
+
+  const seleccionarPrecio = (precio) => {
+    setPrecioElegido(precio);
+    setMostrarModal(false);
+  };
+
+  const puedeContinuar = servicioSeleccionado && precioElegido;
+
+  const preciosDisponibles = servicioSeleccionado?.precios || [
+    servicioSeleccionado?.precio,
+  ];
 
   return (
     <div className="relative text-center p-5 shadow-md flex flex-col justify-start items-center rounded-lg min-h-[250px]">
@@ -17,20 +30,6 @@ const ResumenReserva = ({
         <h2 className="text-2xl text-title mb-4 text-left">
           Datos de la reserva
         </h2>
-        {/* <button
-          className="text-sm text-blue-500 hover:underline ml-auto"
-          onClick={onEditar}
-        >
-          Editar
-        </button> */}
-        {/* <Btn
-          text="Editar"
-          textColor="text-blue-500"
-          className="text-sm hover:underline mb-5 w-5 mr-6"
-          trasparent={true}
-          borderColor="none"
-          disableHover={true}
-        ></Btn>*/}
       </div>
 
       {servicioSeleccionado ? (
@@ -44,10 +43,20 @@ const ResumenReserva = ({
           <p className="text-base text-gray-700 mb-4">
             Necochea 307 OF 3, H3500 Resistencia
           </p>
-          <p className="text-base text-gray-700 mb-4">
-            <strong>Precio:</strong> $
-            {servicioSeleccionado.precio.toLocaleString("es-ES")}
-          </p>
+
+          {precioElegido ? (
+            <p className="text-base text-gray-700 mb-4">
+              <strong>Precio elegido:</strong> $
+              {precioElegido.toLocaleString("es-ES")}
+            </p>
+          ) : (
+            <button
+              onClick={() => setMostrarModal(true)}
+              className="text-blue-600 underline mb-4"
+            >
+              Seleccionar precio
+            </button>
+          )}
         </div>
       ) : (
         <p className="text-gray-700">No se ha seleccionado ningún servicio</p>
@@ -59,13 +68,16 @@ const ResumenReserva = ({
         </p>
       )}
 
-      {servicioSeleccionado && (
+      {puedeContinuar && (
         <Btn
           text={botonTexto}
           onClick={() =>
             navigate("/confirm", {
               state: {
-                servicioSeleccionado,
+                servicioSeleccionado: {
+                  ...servicioSeleccionado,
+                  precio: precioElegido,
+                },
                 date,
                 disponible,
               },
@@ -74,6 +86,32 @@ const ResumenReserva = ({
           type="primary"
           rounded={true}
         />
+      )}
+
+      {/* Modal */}
+      {mostrarModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-sm">
+            <h2 className="text-lg font-semibold mb-4">Elige un precio</h2>
+            <div className="flex flex-col gap-3">
+              {preciosDisponibles.map((precio, index) => (
+                <button
+                  key={index}
+                  onClick={() => seleccionarPrecio(precio)}
+                  className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+                >
+                  ${precio.toLocaleString("es-ES")}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => setMostrarModal(false)}
+              className="mt-4 text-sm text-gray-500 hover:text-gray-700"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );

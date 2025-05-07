@@ -34,6 +34,7 @@ const ReusableSwiper = ({
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="absolute bottom-0 w-full h-60 bg-gradient-to-b from-transparent to-body pointer-events-none z-10 " />
     </div>
   );
 };
