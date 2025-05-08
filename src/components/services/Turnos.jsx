@@ -28,8 +28,8 @@ const Turnos = () => {
     setSelectedService(null);
   };
 
-  const confirmReserva = (reserva) => {
-    navigate("/reserva", { state: { reserva } });
+  const confirmReserva = (serviciosConfirmados) => {
+    navigate("/reserva", { state: { servicios: serviciosConfirmados } });
   };
 
   const handleReservar = (servicio) => {

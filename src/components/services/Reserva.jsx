@@ -78,7 +78,7 @@ const Reserva = () => {
 
         {/* Sección 3: Resumen */}
         <ResumenReserva
-          servicioSeleccionado={servicioSeleccionado}
+          servicios={servicioSeleccionado ? [servicioSeleccionado] : []}
           date={date}
           disponible={disponible}
           onEditar={() => setModalOpen(true)}

@@ -6,7 +6,7 @@ const ModalReserva = ({ isOpen, servicio, onClose, onConfirm }) => {
   const [isAddingService, setIsAddingService] = useState(false);
   const [updatedServices, setUpdatedServices] = useState([]);
   const [showExitAlert, setShowExitAlert] = useState(false);
-  const [selectedOptions, setSelectedOptions] = useState({}); // <-- opción seleccionada por servicio
+  // const [selectedOptions, setSelectedOptions] = useState({});
 
   useEffect(() => {
     if (servicio) {
@@ -59,6 +59,7 @@ const ModalReserva = ({ isOpen, servicio, onClose, onConfirm }) => {
   };
 
   const handleConfirm = () => {
+    console.log("reserva");
     if (updatedServices.length > 0) {
       onConfirm(updatedServices);
     }
