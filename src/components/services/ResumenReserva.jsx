@@ -3,10 +3,9 @@ import Btn from "../atoms/Btn";
 import { useNavigate } from "react-router-dom";
 
 const ResumenReserva = ({
-  servicioSeleccionado,
+  servicios = [], // Asegurarse que servicios sea un array por defecto
   date,
   disponible,
-  onEditar,
   botonTexto = "Siguiente",
 }) => {
   const navigate = useNavigate();
@@ -18,11 +17,18 @@ const ResumenReserva = ({
     setMostrarModal(false);
   };
 
-  const puedeContinuar = servicioSeleccionado && precioElegido;
+  const puedeContinuar = servicios.length > 0 && precioElegido; // Verifica que servicios no esté vacío
 
-  const preciosDisponibles = servicioSeleccionado?.precios || [
-    servicioSeleccionado?.precio,
-  ];
+  const preciosDisponibles =
+    servicios
+      ?.map((servicio) =>
+        Array.isArray(servicio?.precios) && servicio.precios.length > 0
+          ? servicio.precios
+          : servicio?.precio
+          ? [servicio.precio]
+          : []
+      )
+      .flat() || [];
 
   return (
     <div className="relative text-center p-5 shadow-md flex flex-col justify-start items-center rounded-lg min-h-[250px]">
@@ -32,31 +38,21 @@ const ResumenReserva = ({
         </h2>
       </div>
 
-      {servicioSeleccionado ? (
+      {servicios.length > 0 ? (
         <div className="text-left w-full">
-          <p className="text-base text-gray-700 mb-4 mt-10">
-            {servicioSeleccionado.nombre}
-          </p>
-          <p className="text-base text-gray-700 mb-4">
-            {servicioSeleccionado.descripcion}
-          </p>
-          <p className="text-base text-gray-700 mb-4">
-            Necochea 307 OF 3, H3500 Resistencia
-          </p>
-
-          {precioElegido ? (
-            <p className="text-base text-gray-700 mb-4">
-              <strong>Precio elegido:</strong> $
-              {precioElegido.toLocaleString("es-ES")}
-            </p>
-          ) : (
-            <button
-              onClick={() => setMostrarModal(true)}
-              className="text-blue-600 underline mb-4"
-            >
-              Seleccionar precio
-            </button>
-          )}
+          {servicios.map((servicio, index) => (
+            <div key={index}>
+              <p className="text-base text-gray-700 mb-4 mt-10">
+                {servicio.nombre}
+              </p>
+              <p className="text-base text-gray-700 mb-4">
+                {servicio.descripcion}
+              </p>
+              <p className="text-base text-gray-700 mb-4">
+                Necochea 307 OF 6, H3500 Resistencia
+              </p>{" "}
+            </div>
+          ))}
         </div>
       ) : (
         <p className="text-gray-700">No se ha seleccionado ningún servicio</p>
@@ -74,10 +70,8 @@ const ResumenReserva = ({
           onClick={() =>
             navigate("/confirm", {
               state: {
-                servicioSeleccionado: {
-                  ...servicioSeleccionado,
-                  precio: precioElegido,
-                },
+                serviciosSeleccionados: servicios, // Aseguramos que pasamos el array de servicios
+                precio: precioElegido,
                 date,
                 disponible,
               },
@@ -88,7 +82,7 @@ const ResumenReserva = ({
         />
       )}
 
-      {/* Modal */}
+      {/* Modal de selección de precio */}
       {mostrarModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-sm">
