@@ -22,7 +22,6 @@ const Confirm = () => {
     { name: "email", label: "Email", type: "email", required: true },
     { name: "telefono", label: "Teléfono", required: true },
     { name: "mensaje", label: "Mensaje", type: "textarea", required: false },
-    // Aquí podrías agregar más campos según sea necesario
   ];
 
   return (
