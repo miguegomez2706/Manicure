@@ -3,7 +3,7 @@ import Btn from "../atoms/Btn";
 import { useNavigate } from "react-router-dom";
 
 const ResumenReserva = ({
-  servicios = [], // Asegurarse que servicios sea un array por defecto
+  servicios = [],
   date,
   disponible,
   botonTexto = "Siguiente",
@@ -39,29 +39,19 @@ const ResumenReserva = ({
       </div>
 
       {servicios.length > 0 ? (
-        <div className="text-left w-full">
-          {servicios.map((servicio, index) => (
-            <div key={index}>
-              <p className="text-base text-gray-700 mb-4 mt-10">
-                {servicio.nombre}
-              </p>
-              <p className="text-base text-gray-700 mb-4">
-                {servicio.descripcion}
-              </p>
-              <p className="text-base text-gray-700 mb-4">
-                Necochea 307 OF 6, H3500 Resistencia
-              </p>{" "}
-            </div>
-          ))}
-        </div>
+        servicios.length === 1 ? (
+          <div className="text-left w-full">
+            <p className="text-base text-gray-700 mb-4 mt-4">
+              {servicios[0].nombre}
+            </p>
+          </div>
+        ) : (
+          <p className="text-base text-gray-700 mb-4 w-full text-left">
+            {servicios.length} servicios
+          </p>
+        )
       ) : (
         <p className="text-gray-700">No se ha seleccionado ningún servicio</p>
-      )}
-
-      {date && disponible && (
-        <p className="text-base text-gray-700 mb-2 text-left w-full">
-          <strong>Fecha seleccionada:</strong> {date.toLocaleDateString()}
-        </p>
       )}
 
       {puedeContinuar && (
@@ -70,7 +60,7 @@ const ResumenReserva = ({
           onClick={() =>
             navigate("/confirm", {
               state: {
-                serviciosSeleccionados: servicios, // Aseguramos que pasamos el array de servicios
+                serviciosSeleccionados: servicios,
                 precio: precioElegido,
                 date,
                 disponible,
