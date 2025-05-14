@@ -8,11 +8,15 @@ import SelectorDePrecio from "../molecules/selectorDePrecio/SelectorDePrecio";
 
 const Turnos = () => {
   const navigate = useNavigate();
+  //  Define un estado booleano (modalOpen) para controlar si el modal de reserva está visible o no. Inicialmente está en false (cerrado). setModalOpen es la función que se utiliza para actualizar este estado.
   const [modalOpen, setModalOpen] = useState(false);
+  // Almacena el objeto del servicio que el usuario ha seleccionado para reservar. Inicialmente es null. setSelectedService actualiza este estado.
   const [selectedService, setSelectedService] = useState(null);
+  // const [mostrarSelector, setMostrarSelector] = useState(false);: Controla la visibilidad del componente SelectorDePrecio. Empieza en false (oculto). setMostrarSelector lo actualiza.
   const [mostrarSelector, setMostrarSelector] = useState(false);
   const [servicioParaSeleccionar, setServicioParaSeleccionar] = useState(null);
 
+  // Esta función se llama cuando se quiere abrir el modal de reserva. Recibe el objeto del servicio seleccionado, lo guarda en el estado selectedService y luego establece modalOpen en true para mostrar el modal.
   const openModal = (servicio) => {
     setSelectedService(servicio);
     setModalOpen(true);

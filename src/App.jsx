@@ -11,28 +11,31 @@ import Confirm from "./components/services/Confirm.jsx";
 import { useEffect } from "react";
 import InfoCurso from "./components/organisms/InfoCurso.jsx";
 import ModalConsulta from "./components/molecules/ModalConsulta.jsx";
+import { ServiciosProvider } from "./components/services/ServiciosContext.jsx";
 
 function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Router basename="/">
-      <div className="font-playfair bg-body">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/cursos" element={<ListCurso />} />
-          <Route path="/infocurso/:id" element={<InfoCurso />} />
-          <Route path="/salon" element={<SalonPage />} />
-          <Route path="/turnos" element={<Turnos />} />
-          <Route path="/reserva" element={<Reserva />} />
-          <Route path="/confirm" element={<Confirm />} />
-          <Route path="/modal" element={<ModalConsulta />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ServiciosProvider>
+      <Router basename="/">
+        <div className="font-playfair bg-body">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/cursos" element={<ListCurso />} />
+            <Route path="/infocurso/:id" element={<InfoCurso />} />
+            <Route path="/salon" element={<SalonPage />} />
+            <Route path="/turnos" element={<Turnos />} />
+            <Route path="/reserva" element={<Reserva />} />
+            <Route path="/confirm" element={<Confirm />} />
+            <Route path="/modal" element={<ModalConsulta />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ServiciosProvider>
   );
 }
 
