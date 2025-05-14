@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import ResumenReserva from "./ResumenReserva";
+// import ResumenReserva from "./ResumenReserva";
 import FormularioReserva from "./FormularioReserva";
 
 const Confirm = () => {
@@ -22,7 +22,6 @@ const Confirm = () => {
     { name: "email", label: "Email", type: "email", required: true },
     { name: "telefono", label: "Teléfono", required: true },
     { name: "mensaje", label: "Mensaje", type: "textarea", required: false },
-    // Aquí podrías agregar más campos según sea necesario
   ];
 
   return (

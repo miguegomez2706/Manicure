@@ -11,6 +11,7 @@ import Confirm from "./components/services/Confirm.jsx";
 import { useEffect } from "react";
 import InfoCurso from "./components/organisms/InfoCurso.jsx";
 import ModalConsulta from "./components/molecules/ModalConsulta.jsx";
+import { ServiciosProvider } from "./components/services/ServiciosContext.jsx";
 
 function App() {
   useEffect(() => {
