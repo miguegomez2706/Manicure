@@ -186,7 +186,8 @@ const Reserva = () => {
 
       <ModalReserva
         isOpen={modalOpen}
-        servicio={serviciosRecibidos.length > 0 ? serviciosRecibidos[0] : null}
+        // servicio={serviciosRecibidos.length > 0 ? serviciosRecibidos[0] : null}
+        serviciosIniciales={serviciosDeLaReserva}
         onClose={handleCloseModal}
         onConfirm={handleConfirmReserva}
       />

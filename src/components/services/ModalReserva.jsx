@@ -3,26 +3,26 @@ import Btn from "../atoms/Btn";
 // Asegúrate que esta ruta sea correcta para tu estructura de proyecto
 import { servicios } from "../../assets/dataStore"; // <--- Importa los servicios
 
-const ModalReserva = ({ isOpen, servicio, onClose, onConfirm }) => {
-  // 'servicio' ahora puede tener el servicio inicial seleccionado
+const ModalReserva = ({
+  isOpen,
+  serviciosIniciales,
+  onClose,
+  onConfirm,
+  onAddMore,
+}) => {
   const [isAddingService, setIsAddingService] = useState(false);
   const [updatedServices, setUpdatedServices] = useState([]); // Estado interno para los servicios de ESTA reserva
   const [showExitAlert, setShowExitAlert] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState({});
 
   useEffect(() => {
-    // Inicializa los servicios del modal.
-    if (servicio) {
-      // Formatea el servicio recibido para que coincida con la estructura de updatedServices
-      const servicioInicialConFormato = {
-        id: `${servicio.descripcion}-${servicio.nombre}-${Date.now()}`, // Genera un ID único
-        nombre: servicio.nombre,
-        descripcion: servicio.descripcion,
-        subDescripcion: servicio.subDescripcion,
-        precio: servicio.precio,
-        opcion: servicio.nombre,
-      };
-      setUpdatedServices([servicioInicialConFormato]);
+    // Inicializa los servicios del modal con la prop recibida (siempre un array)
+    if (
+      serviciosIniciales &&
+      Array.isArray(serviciosIniciales) &&
+      serviciosIniciales.length > 0
+    ) {
+      setUpdatedServices(serviciosIniciales.map((s) => ({ ...s }))); // Crear una copia
       setIsAddingService(false); // Mostrar el resumen directamente
     } else {
       setUpdatedServices([]);
@@ -30,11 +30,10 @@ const ModalReserva = ({ isOpen, servicio, onClose, onConfirm }) => {
     }
     setSelectedOptions({});
     setShowExitAlert(false);
-  }, [isOpen, servicio]); // React to changes in isOpen and the initial servicio prop
+  }, [isOpen, serviciosIniciales]);
 
   if (!isOpen) return null;
 
-  // --- Lógica para añadir servicio (sin cambios importantes aquí) ---
   const handleAddService = (servicioBase) => {
     const selectedOption = selectedOptions[servicioBase.descripcion];
     if (!selectedOption) {
@@ -64,14 +63,12 @@ const ModalReserva = ({ isOpen, servicio, onClose, onConfirm }) => {
     setIsAddingService(false); // Volver al resumen después de añadir
   };
 
-  // --- Lógica para eliminar servicio (sin cambios) ---
   const handleRemoveService = (idToRemove) => {
     setUpdatedServices((prevServices) =>
       prevServices.filter((s) => s.id !== idToRemove)
     );
   };
 
-  // --- Lógica para cerrar (sin cambios) ---
   const handleClose = () => {
     if (updatedServices.length > 0 && !showExitAlert) {
       setShowExitAlert(true);
@@ -80,13 +77,11 @@ const ModalReserva = ({ isOpen, servicio, onClose, onConfirm }) => {
     }
   };
 
-  // --- Lógica para salir sin reservar (sin cambios) ---
   const handleExitWithoutBooking = () => {
     setShowExitAlert(false);
     onClose();
   };
 
-  // --- Lógica para confirmar (sin cambios) ---
   const handleConfirm = () => {
     if (updatedServices.length === 0) {
       alert(
@@ -98,7 +93,6 @@ const ModalReserva = ({ isOpen, servicio, onClose, onConfirm }) => {
     onConfirm(updatedServices);
   };
 
-  // Calcular total para mostrar en el modal (sin cambios)
   const totalModal = updatedServices.reduce(
     (sum, service) => sum + service.precio,
     0
@@ -254,6 +248,7 @@ const ModalReserva = ({ isOpen, servicio, onClose, onConfirm }) => {
                   className="w-full mt-4 border border-gray-300 text-gray-800 hover:bg-gray-100"
                   bgColor="bg-transparent"
                   textColor="text-gray-800"
+                  disableHover={false}
                 />
               )}
             </div>

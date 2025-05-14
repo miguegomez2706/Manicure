@@ -127,7 +127,8 @@ const Turnos = () => {
 
       <ModalReserva
         isOpen={modalOpen}
-        servicio={selectedService}
+        serviciosIniciales={selectedService ? [selectedService] : []}
+        // servicio={selectedService}
         onClose={closeModal}
         onConfirm={confirmReserva}
         onAddMore={addMoreService}
