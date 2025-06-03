@@ -2,10 +2,12 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 // import ResumenReserva from "./ResumenReserva";
 import FormularioReserva from "./FormularioReserva";
+import ResumenReserva from "./ResumenReserva";
+// import ModalReserva from "./ModalReserva";
 
 const Confirm = () => {
   const location = useLocation();
-  const { servicioSeleccionado, date, disponible } = location.state || {};
+  const { servicioSeleccionado, date, horario } = location.state || {};
 
   const handleEditar = () => {
     // Podrías usar navigate para volver a la página anterior
@@ -51,12 +53,22 @@ const Confirm = () => {
 
       <div className="w-full lg:w-1/3">
         <ResumenReserva
+          date={date}
+          horarioSeleccionado={horario}
+          serviciosDeLaReserva={servicioSeleccionado}
+          notaAdicional={
+            "Al completar tu reserva, aceptas recibir notificaciones por SMS sobre la reserva."
+          }
+          direccion={true}
+        />
+
+        {/* <ModalReserva
           servicioSeleccionado={servicioSeleccionado}
           date={date}
           disponible={disponible}
           onEditar={handleEditar}
           botonTexto="Reservar ahora"
-        />
+        /> */}
       </div>
     </div>
   );
