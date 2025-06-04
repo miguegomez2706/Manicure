@@ -4,14 +4,13 @@ import Navbar from "./components/molecules/navbar.jsx";
 import Footer from "./components/molecules/Footer.jsx";
 import SalonPage from "./components/organisms/SalonPage.jsx";
 import HomePage from "./components/organisms/HomePage.jsx";
-import Reserva from "./components/services/Reserva.jsx";
-import Turnos from "./components/services/Turnos.jsx";
+import Reserva from "./components/organisms/Reserva.jsx";
+import Turnos from "./components/organisms/Turnos.jsx";
 import ListCurso from "./components/organisms/ListCurso.jsx";
-import Confirm from "./components/services/Confirm.jsx";
+import Confirm from "./components/organisms/Confirm.jsx";
 import { useEffect } from "react";
 import InfoCurso from "./components/organisms/InfoCurso.jsx";
 import ModalConsulta from "./components/molecules/ModalConsulta.jsx";
-import { ServiciosProvider } from "./components/services/ServiciosContext.jsx";
 
 function App() {
   useEffect(() => {
