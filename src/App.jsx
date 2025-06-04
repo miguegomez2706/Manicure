@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/molecules/navbar.jsx";
 import Footer from "./components/molecules/Footer.jsx";
@@ -16,8 +16,8 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
-    // <Router basename="/">
     <div className="font-playfair bg-body">
       <Navbar />
       <Routes>
@@ -32,7 +32,6 @@ function App() {
       </Routes>
       <Footer />
     </div>
-    // </Router>
   );
 }
 
