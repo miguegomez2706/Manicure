@@ -1,4 +1,4 @@
-import Btn from "../../atoms/Btn";
+import Btn from "../atoms/Btn";
 
 const SelectorDePrecio = ({ servicio, onSelect, onCancel }) => {
   return (

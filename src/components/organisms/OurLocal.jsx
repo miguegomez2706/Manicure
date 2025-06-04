@@ -1,5 +1,5 @@
 import LocalDescription from "../molecules/LocalDescription";
-import Mapa from "../map/Mapa";
+import Mapa from "../molecules/Mapa";
 
 const OurLocal = () => {
   return (

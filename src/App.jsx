@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/molecules/navbar/navbar.jsx";
+import Navbar from "./components/molecules/navbar.jsx";
 import Footer from "./components/molecules/Footer.jsx";
-import SalonPage from "./components/salonPage/SalonPage.jsx";
+import SalonPage from "./components/organisms/SalonPage.jsx";
 import HomePage from "./components/organisms/HomePage.jsx";
 import Reserva from "./components/services/Reserva.jsx";
 import Turnos from "./components/services/Turnos.jsx";

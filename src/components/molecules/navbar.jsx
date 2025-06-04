@@ -1,7 +1,7 @@
 import { useState } from "react";
-import icon from "../../../assets/image/icono/icono.ico";
+import icon from "../../assets/image/icono/icono.ico";
 import { useNavigate } from "react-router-dom";
-import Btn from "../../atoms/Btn";
+import Btn from "../atoms/Btn";
 import { FaWhatsapp } from "react-icons/fa";
 
 const NavBar = () => {
