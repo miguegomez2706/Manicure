@@ -7,6 +7,8 @@ const HomeSwiper = () => {
     <div className="relative w-full">
       <ReusableSwiper />
       <TextSwiper />
+
+      <div className="absolute bottom-[60%] sm:bottom-0 w-full h-60 bg-gradient-to-b from-transparent to-body pointer-events-none z-10 " />
     </div>
   );
 };

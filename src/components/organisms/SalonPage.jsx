@@ -1,8 +1,8 @@
-import Perfil from "../nosotros/Perfil";
+import Perfil from "../molecules/Perfil";
 import AboutUs from "../atoms/AboutUs";
-import OurLocal from "../organisms/OurLocal";
+import OurLocal from "./OurLocal";
 import { perfiles, slidesAboutUs } from "../../assets/dataStore";
-import ReusableSwiper from "../organisms/ReusableSwiper";
+import ReusableSwiper from "./ReusableSwiper";
 import { useEffect, useState } from "react";
 
 const SalonPage = () => {

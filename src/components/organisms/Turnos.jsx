@@ -4,7 +4,7 @@ import Btn from "../atoms/Btn";
 import { servicios } from "../../assets/dataStore";
 import ModalReserva from "./ModalReserva";
 import fondo from "../../assets/image/fondo/glamorous.svg";
-import SelectorDePrecio from "../molecules/selectorDePrecio/SelectorDePrecio";
+import SelectorDePrecio from "../molecules/SelectorDePrecio";
 
 const Turnos = () => {
   const navigate = useNavigate();
