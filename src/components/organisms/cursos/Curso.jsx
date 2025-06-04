@@ -1,5 +1,5 @@
-import img from "../../assets/image/semipermanente/semi6.jpeg";
-import Btn from "../atoms/Btn";
+import img from "../../../assets/image/semipermanente/semi6.jpeg";
+import Btn from "../../atoms/Btn";
 import { FaPlayCircle } from "react-icons/fa";
 import PropTypes from "prop-types";
 

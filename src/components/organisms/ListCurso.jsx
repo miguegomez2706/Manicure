@@ -1,4 +1,4 @@
-import Curso from "../cursos/Curso";
+import Curso from "./cursos/Curso";
 import { contenidoCursos } from "../../assets/dataStore";
 import { useEffect, useState } from "react";
 
