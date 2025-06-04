@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import ModalReserva from "./ModalReserva";
-import Disponibilidad from "./Disponibilidad";
+import Disponibilidad from "../molecules/Disponibilidad";
 import Btn from "../atoms/Btn";
 import ResumenReserva from "./ResumenReserva";
 import { useLocation } from "react-router-dom";

@@ -21,25 +21,26 @@ export default {
         ],
       },
       colors: {
-        title: "hsl(250, 8%, 15%)",
+        // Body
         body: "hsl(250, 60%, 98%)",
+        header: "rgba(255, 255, 255, 0.8)",
+        container: "hsl(0, 0%, 20%)",
+        containerRgb: "rgba(255, 255, 255)",
+        // Textos
+        title: "hsl(250, 8%, 15%)",
         text: "hsl(250, 8%, 35%)",
         textHover: "#fb7185",
+        // Botones
         button: "#fecdd3",
         buttonHover2: "#fb7185",
         buttonHover: "rgb(58, 73, 77)",
         newBorderColor: "#fb7185",
         mycolor: "#212121",
         beige: "#E5DCBC",
-        header: "rgba(255, 255, 255, 0.8)",
         nav: "hsl(250, 5%, 24%)",
-        container: "hsl(0, 0%, 20%)",
-        containerRgb: "rgba(255, 255, 255)",
         shadow: "hsla(0, 0%, 15%, 0.1)",
         scrollbar: "hsl(250, 12%, 90%)",
         scrollThumb: "hsl(250, 12%, 80%)",
-        first: "hsl(0, 90%, 60%)",
-        firstAlt: "hsl(0, 90%, 65%)",
         dark: {
           header: "rgba(32, 32, 32, 0.9)",
           title: "hsl(0, 0%, 90%)",

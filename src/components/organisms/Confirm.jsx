@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 // import ResumenReserva from "./ResumenReserva";
-import FormularioReserva from "./FormularioReserva";
+import FormularioReserva from "../molecules/FormularioReserva";
 import ResumenReserva from "./ResumenReserva";
 // import ModalReserva from "./ModalReserva";
 
