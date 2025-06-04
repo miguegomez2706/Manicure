@@ -4,7 +4,9 @@ import "react-calendar/dist/Calendar.css";
 import ModalReserva from "./ModalReserva";
 import Disponibilidad from "./Disponibilidad";
 import Btn from "../atoms/Btn";
+import ResumenReserva from "./ResumenReserva";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Reserva = () => {
   const [date, setDate] = useState(new Date());
@@ -85,6 +87,23 @@ const Reserva = () => {
     0
   );
 
+  const navigate = useNavigate();
+
+  const irAConfirmacion = () => {
+    if (!fechaHoraSeleccionada || serviciosDeLaReserva.length === 0) {
+      alert("Selecciona una fecha, hora y servicio antes de continuar.");
+      return;
+    }
+
+    navigate("/confirm", {
+      state: {
+        servicioSeleccionado: serviciosDeLaReserva,
+        date,
+        horario: horarioSeleccionado,
+      },
+    });
+  };
+
   return (
     <div className="max-w-7xl mx-auto p-4 md:p-6 lg:p-8 bg-gray-50 min-h-screen">
       <header className="mb-8">
@@ -124,65 +143,18 @@ const Reserva = () => {
           buscarProximaDisponibilidad={buscarProximaDisponibilidad}
         />
 
-        <div className="p-5 shadow-lg rounded-lg bg-white flex flex-col justify-between">
-          <div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-4 border-b pb-2">
-              Resumen de la cita.
-            </h3>
-            <p className="text-gray-600 mb-2">Fecha seleccionada:</p>
-            <p className="font-semibold text-lg text-indigo-700 mb-4">
-              {date.toLocaleDateString("es-ES", {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </p>
-            <p className="text-gray-600 mb-2">Hora seleccionada:</p>
-            <p
-              className={`font-semibold text-lg mb-4 ${
-                horarioSeleccionado ? "text-indigo-700" : "text-gray-400"
-              }`}
-            >
-              {horarioSeleccionado ? horarioSeleccionado : "Pendiente..."}
-            </p>
-
-            {serviciosDeLaReserva.length > 0 && (
-              <div>
-                <h4 className="text-lg font-medium text-gray-700 mt-4 mb-3 border-t pt-3">
-                  Servicios Seleccionados:
-                </h4>
-                <ul className="list-disc list-inside space-y-2 text-gray-800 mb-4">
-                  {serviciosDeLaReserva.map((servicio) => (
-                    <li key={servicio.id}>
-                      {servicio.nombre || servicio.descripcion} (
-                      {servicio.opcion})
-                      <span className="font-numeros font-semibold ml-2 float-right text-indigo-600">
-                        ${servicio.precio.toLocaleString("es-ES")}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-2 text-xl font-bold text-indigo-700 border-t pt-3">
-                  Total:{" "}
-                  <span className="font-numeros float-right">
-                    ${totalReservaConfirmada.toLocaleString("es-ES")}
-                  </span>
-                </p>
-              </div>
-            )}
-          </div>
-
-          <Btn
-            text="3. Seleccionar Servicios"
-            onClick={handleOpenModal}
-            disabled={!fechaHoraSeleccionada}
-            className={`w-full mt-4 text-lg py-3 ${
-              !fechaHoraSeleccionada ? "opacity-50 cursor-not-allowed" : ""
-            }`}
-          />
-        </div>
+        <ResumenReserva
+          date={date}
+          horarioSeleccionado={horarioSeleccionado}
+          serviciosDeLaReserva={serviciosDeLaReserva}
+        />
       </div>
+
+      <Btn
+        text="Continuar con la reserva"
+        onClick={irAConfirmacion}
+        className="mt-6 px-6 py-3 bg-indigo-600 text-white font-bold rounded hover:bg-indigo-700"
+      />
 
       <ModalReserva
         isOpen={modalOpen}
